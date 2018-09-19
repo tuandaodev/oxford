@@ -1,0 +1,2 @@
+Error log entries aren't going to be responsible for "killing mysql" but they may point to the cause. 
+To repair a MySQL database, first open the phpMyAdmin tool, then the Databases tab and click on the name of the desired database. Select the tables that need repair by ticking the check-boxes on the left of the table names. Then from the With Selected: drop down menu choose Repair Table. The tables will be automatically repaired and you will be presented with a page showing the results from the repair operation.

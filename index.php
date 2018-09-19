@@ -1,107 +1,150 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tools</title>
 
-set_time_limit(0);
-
-$main_url = "https://www.oxfordlearnersdictionaries.com/definition/english/";
-
-$data = file_get_contents('list.txt');
-
-$words = explode("\n", $data);
-
-$count = 0;
-foreach ($words as $word) {
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <?php
+  
+    $text_data = '';
+    $file_saved = 'saved_input.txt';
+    $file_exported = 'exported.csv';
+    $need_export = false;
+    $have_exported_file = false;
     
-    $count++;
-//    if ($count++ > 5) exit;
-    
-    $word = trim($word);
-    
-    $word_url = $main_url . $word;
-    $word_data = get_remote_data($word_url);
-    
-    $replacement = "";
-    
-    $rex = '/<span class="collapse"(.*?)<\/span><\/span><\/span>/m';
-    $word_data = preg_replace($rex, $replacement, $word_data);
-    
-    $rex = '/data-src-mp3="(.*?).mp3"/m';
-    $result = '';
-    preg_match_all($rex, $word_data, $result);
-    
-    if (isset($result[1]) && count($result[1]) > 0) {
-        $final_result = $result[1];
-        $final_result = array_unique($final_result);
-        foreach ($final_result as $mp3_url) {
-            $mp3_url = $mp3_url . '.mp3';
-            
-//            echo $mp3_url . "<br/>";
-            
-            $file_name = basename($mp3_url);
-            $file_path = 'download/' . $file_name;
-            file_put_contents($file_path, fopen($mp3_url, 'r'));
+    if (isset($_POST) && !empty($_POST)) {
+        
+        if (isset($_POST['type_submit']) && $_POST['type_submit'] == 'submit') {
+            $need_export = true;
+            if ($_POST['doan_van']) {
+                $string = $_POST['doan_van'];
+                file_put_contents($file_saved, $string);
+                
+                $text_data = $string;
+            }
         }
-        echo "$count [DONE]:   " . $word . " " . count($final_result) . " " . $word_url . "<br/>";
+        
+        if (isset($_POST['type_reset']) && $_POST['type_reset'] == 'reset') {
+            if (file_exists($file_saved)) unlink($file_saved);
+            if (file_exists($file_exported)) unlink($file_exported);
+        }
+        
     } else {
-        echo "$count [ERROR]:   " . $word . " " . $word_url . "<br/>";
-    }
-}
-
-echo "ALL DONE. " . $count;
-
-function get_remote_data($url, $post_paramtrs=false)
-{
-    $c = curl_init();
-    curl_setopt($c, CURLOPT_URL, $url);
-    curl_setopt($c, CURLOPT_RETURNTRANSFER, 1);
-    if($post_paramtrs)
-    {
-        curl_setopt($c, CURLOPT_POST,TRUE);
-        curl_setopt($c, CURLOPT_POSTFIELDS, "var1=bla&".$post_paramtrs );
-    }
-    curl_setopt($c, CURLOPT_SSL_VERIFYHOST,false);
-    curl_setopt($c, CURLOPT_SSL_VERIFYPEER,false);
-    curl_setopt($c, CURLOPT_USERAGENT, "Mozilla/5.0 (Windows NT 6.1; rv:33.0) Gecko/20100101 Firefox/33.0");
-    curl_setopt($c, CURLOPT_COOKIE, 'CookieName1=Value;');
-    curl_setopt($c, CURLOPT_MAXREDIRS, 10);
-    $follow_allowed= ( ini_get('open_basedir') || ini_get('safe_mode')) ? false:true;
-    if ($follow_allowed)
-    {
-        curl_setopt($c, CURLOPT_FOLLOWLOCATION, 1);
-    }
-    curl_setopt($c, CURLOPT_CONNECTTIMEOUT, 9);
-    curl_setopt($c, CURLOPT_REFERER, $url);
-    curl_setopt($c, CURLOPT_TIMEOUT, 60);
-    curl_setopt($c, CURLOPT_AUTOREFERER, true);
-    curl_setopt($c, CURLOPT_ENCODING, 'gzip,deflate');
-    $data=curl_exec($c);
-    $status=curl_getinfo($c);
-    curl_close($c);
-    preg_match('/(http(|s)):\/\/(.*?)\/(.*\/|)/si',  $status['url'],$link); $data=preg_replace('/(src|href|action)=(\'|\")((?!(http|https|javascript:|\/\/|\/)).*?)(\'|\")/si','$1=$2'.$link[0].'$3$4$5', $data);   $data=preg_replace('/(src|href|action)=(\'|\")((?!(http|https|javascript:|\/\/)).*?)(\'|\")/si','$1=$2'.$link[1].'://'.$link[3].'$3$4$5', $data);
-    if($status['http_code']==200)
-    {
-        return $data;
-    }
-    elseif($status['http_code']==301 || $status['http_code']==302)
-    {
-        if (!$follow_allowed)
-        {
-            if (!empty($status['redirect_url']))
-            {
-                $redirURL=$status['redirect_url'];
-            }
-            else
-            {
-                preg_match('/href\=\"(.*?)\"/si',$data,$m);
-                if (!empty($m[1]))
-                {
-                    $redirURL=$m[1];
-                }
-            }
-            if(!empty($redirURL))
-            {
-                return  call_user_func( __FUNCTION__, $redirURL, $post_paramtrs);
+        if (file_exists($file_saved)) {
+            $text_data = file_get_contents($file_saved);
+            if (file_exists($file_exported)) {
+                $have_exported_file = true;
             }
         }
     }
-    return "ERRORCODE22 with $url!!<br/>Last status codes<b/>:".json_encode($status)."<br/><br/>Last data got<br/>:$data";
-}
+    
+    if ($text_data) {
+        $text_data = strtolower($text_data);
+        $all_words = str_word_count($text_data, 1);
+        $result = array_count_values($all_words);
+        arsort($result);
+        
+        if ($need_export && count($result) > 0) {
+            $fp = fopen($file_exported, 'w');
+            
+            $count = 0;
+            foreach ($result as $word => $time) {
+                $count++;
+                $temp = array($count,$word,$time);
+                fputcsv($fp, $temp);
+            }
+            fclose($fp);
+            $have_exported_file = true;
+        }
+    }
+    
+  ?>
+  <body>
+      <div id="page-wrapper">
+          <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Tools</h1>
+                </div>
+            </div>
+          <div class="row">
+              <div class="col-lg-12">
+                  <div class="panel panel-default">
+                        <div class="panel-heading">Tools tách từ và đếm số lần lặp lại
+                          </div>
+                        <div class="panel-body">
+                            <div class="row show-grid">
+                                <form method="POST">
+                                    <div class="col-md-7">
+                                        <div class="form-group">
+                                            <label>Nhập đoạn văn ở đây:</label>
+                                            <textarea class="form-control" rows="10" id="doan_van" name="doan_van" style="resize:vertical;"><?php echo $text_data ?></textarea>
+                                        </div>
+                                        <button type="submit" class="btn btn-success" name="type_submit" value="submit">Submit Button</button>
+                                        <button type="submit" class="btn btn-default" name="type_reset" value="reset">Reset Button</button>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <div class="form-group">
+                                            <label>Kết quả:</label>
+                                            
+                                            <?php if ($have_exported_file) { ?>
+                                            <a href='<?php echo $file_exported ?>'><b>Download</b></a>
+                                            <?php } ?>
+                                            <div class="table-responsive">
+                                                <table class="table table-striped table-bordered table-hover">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class='text-center' style="width: 10%">STT</th>
+                                                            <th class='text-center'>Từ</th>
+                                                            <th class='text-center' style="width: 20%">Số lần xuất hiện</th>
+                                                            <?php
+                                                                if (isset($result) && count($result > 0)) {
+                                                                    $count = 0;
+                                                                    foreach ($result as $word => $time) {
+                                                                        $count++;
+                                                                        echo "<tr>
+                                                                                <td class='text-center'>$count</td>
+                                                                                <td>$word</td>
+                                                                                <td class='text-center'>$time</td>
+                                                                            </tr>";
+                                                                    }
+                                                                }
+                                                            ?>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+          </div>
+          <footer class="page-footer font-small teal pt-4">
+            <div class="footer-copyright py-3" style='text-align: right'>© 2018 Developer by:
+              <a href='skype:live:tuandao.dev?chat'> Tuan Dao</a>
+            </div>
+          </footer>
+      </div>
+
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  </body>
+</html>
+
+
