@@ -9,8 +9,8 @@
   <?php
   
     $text_data = '';
-    $file_saved = 'saved_input.txt';
-    $file_exported = 'exported.csv';
+    $file_saved = 'input/saved_input.txt';
+    $file_exported = 'export/exported.csv';
     $need_export = false;
     $have_exported_file = false;
     

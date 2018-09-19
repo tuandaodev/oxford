@@ -1,2 +1,2635 @@
-Error log entries aren't going to be responsible for "killing mysql" but they may point to the cause. 
-To repair a MySQL database, first open the phpMyAdmin tool, then the Databases tab and click on the name of the desired database. Select the tables that need repair by ticking the check-boxes on the left of the table names. Then from the With Selected: drop down menu choose Repair Table. The tables will be automatically repaired and you will be presented with a page showing the results from the repair operation.
+tienganh
+he's trimming the bushes.
+he's feeding a horse.
+he's riding across the lawn.
+he's lining up for a race.
+a woman is looking at a screen.
+a woman is grabbing a book.
+a woman is leaning against a bookcase.
+a woman is assembling a shelf.
+the restaurant is crowded with diners.
+chairs have been stacked on top of each other.
+fabric is being draped over the tables.
+shadows are being cast on the pavement.
+some people are facing each other.
+some people are writing on notepads.
+some people are resting their arms on the desk.
+some people are looking at the window.
+they're waving to the driver.
+they're tapping on the windows.
+they're lined up outdoors.
+they're seated on the school bus.
+some sun loungers have been laid on the sand.
+a boat is being rowed on the ocean.
+some rocks are situated in the water.
+the beach is located near a forest.
+a woman is looking at the floor.
+a woman is pushing a shopping cart.
+a woman is walking past the counter.
+a woman is placing some items in a basket.
+two women are picking up some leaves.
+a woman is holding her dog in her arms.
+two women are walking their pets.
+a woman is wearing glasses.
+a man is resting his arms on the counter.
+an airplane is ready to depart .
+a form of id is being scanned.
+a woman is handing over some lugguage.
+a book has been left under a table.
+some chairs are facing the swimming pool.
+a bottle of wine is being poured into glasses.
+some sun umbrellas are stuck in the sand.
+she's cutting a stem.
+she's preparing some food.
+she's washing dishes.
+she's cleaning a vase.
+a rope has been tied to a bar.
+a horse is being ridden.
+an animal is resting in a barn.
+a hose has been left on the ground.
+one of the women is pouring a beverage into cups.
+the two men are seated across from each other.
+one of the women is printing a chart.
+some people are watching a presentation.
+one of the people is receiving a diploma.
+all the people are sitting in a row.
+a stage has been set up behind the people.
+all the students are shaking hands with one another.
+they're swimming in a lake
+they're sleeping in a tent.
+they're setting up camping gear.
+they're hiking in the forest.
+they are entering a vehicle.
+they are peeking into their bags.
+they are putting on their clothes.
+they are standing by a car trunk.
+a man is organizing a room.
+a man is doing a cleaning task.
+a man is emptying a trash can.
+a man is sitting on the curb.
+the man is passing an object to the woman.
+the woman is tapping on a car window.
+the man is getting into a vehicle.
+the woman is waiting for a parking spot.
+some signs are blocking the entrance.
+a clock is hanging above a doorway.
+some recycling bins are being emptied.
+the doors have been left open.
+a man is putting away some crutches.
+two people are looking at each other.
+a woman is monitoring a patient.
+they are entering an elevator.
+a man is shaving his beard.
+a man is taking off his glasses.
+a man is removing his clothing.
+a man is looking at his reflection.
+the man is pouring some liquid.
+the woman is entering the laboratory.
+the man is putting on gloves.
+the woman is wearing eye protection.
+a cooking device is being cleaned.
+a countertop is being wiped with a rag.
+a kitchen is being decorated.
+a pan is sitting on the stove's burner.
+trees are casting shadows on a beach.
+cyclists are riding in the same direction. 
+some people are jogging on a path.
+three bicycles are locked to a rack.
+a group of women are looking in a miror.
+some instructors are teaching a dance.
+several women are facing one another.
+some women are lying on their backs.
+a man is cutting his hair.
+a man is looking at hair clippers.
+a man is having his hair trimmed.
+a man is holding a comb.
+a large pot is being washed.
+they're shopping for vegetables.
+a knife is being sharpened.
+some food is being prepared.
+a folding chair is covered with a cushion.
+a window is being opened.
+there's a large plant in a pot.
+there's a poster hanging on the wall.
+luggage has been left on the sidewalk.
+one person is exiting the taxi.
+she's loading some bags into the trunk.
+some suitcases are being packed.
+trash cans have been left on the street.
+a truck is clearing the roadway.
+a van has been parked by a tree. 
+children are playing in the snow.
+she's holding reading material.
+she's entering a gate.
+she's talking on her cellphone.
+she's looking at the scenery.
+some people are attending a business lunch.
+one of the women is drawing a picture.
+both of the men are wearing glasses.
+one of the people is dressed in a business suit.
+a potted plant is located on the floor.
+an outdoor railing is being painted.
+flowers have been placed in a container.
+bushes are being trimmed in agarden.
+two people are seated across from one another.
+one man is drawing on a chart.
+the men are exchanging some paperwork.
+one man is erasing a whiteboard.
+a man is walking across a crosswalk.
+a man is getting into a car.
+a man is pushing a handcart.
+a man is sweeping the street.
+a board is being measured.
+wood has been stacked in a pile.
+some lumber is being caried.
+the construction site has been abandoned.
+a man is seated in a garden.
+a woman is holding a long paint roller.
+two people are standing on a roof.
+two people are painting a fence.
+some clothes are folded under the shelf.
+all of the shirts are identical.
+clothes have been hung on the hangers.
+some sweaters have been tossed on the floor.
+they're smiling at each other.
+one man is taking an item to a delivery truck.
+they're unpacking the box together.
+one man is signing a paper on a clipboard.
+the parking lot is crowded with cars.
+traffic is stopped at an intersection.
+vehicles are lined up for sale.
+the highway is divided into lanes.
+he's waiting in a parking lot.
+he's filling the car with fuel.
+he's paying for his purchase.
+he's holding his car key.
+a man is opening a briefcase.
+one of the men is entering a plane.
+they're greeting one another.
+they're going on vacation together.
+they're sitting along the wall.
+they're swimming in the water.
+they're catching fish with a net.
+they're using some fishing gear.
+skyscrapers overlook a large forest.
+people are sunbathing on the beach.
+a canal passes by some tall buildings.
+two people are jogging near the shore.
+fresh fruit is being sold at a market.
+chairs have been pushed under the table.
+the dishes on the table are empty.
+food is being arranged neatly on plates.
+people are boarding some boats.
+buildings have been constructed along a street.
+small boats are lined up in rows.
+the waterway flows  under a bridge.
+a man is standing on a stepladder.
+a man is hanging a paiting on the wall.
+a man is inspecting the wallpapaer.
+a man is changing a light bulb.
+some passengers are taking their seats.
+some passengers are waiting  on the platform.
+some people are exiting the train.
+some travelers are purchasing train tickets.
+children are standing in the water.
+some girls are patting the dogs.
+people are swimming in the sea.
+two dogs are chasing away some birds.
+one woman is pointing at a vehicle.
+two people are holding hands.
+one woman is hanging up a sign.
+two people are standing side by side.
+the woman is holding some documents.
+the woman is opening a laptop.
+the woman is putting paper into a folder.
+the woman is leaving the office.
+some customers are talking to a cashier.
+a group of people is drinking from wine glasses.
+a group of people is receiving their orders.
+some women are gathered in front of a fireplace.
+the man is pointing at a doorway.
+the woman is cleaning a device.
+the man is adjusting his tie.
+the woman is looking at the screen.
+he's working with some small tools.
+he's turning on a desk lamp.
+he's hammering nails into some wood.
+he's reading from a piece of paper.
+a dentist is checking a man's teeth.
+a doctor is putting on some gloves.
+a man is checking his pulse.
+a patient is lying on his back.
+the man is lifting some equipment.
+the people are surfing in the sea.
+a cliff overlooks the water.
+some rocks are piled on the grass.
+she's arranging flowers in a vase.
+she's filling her car with items.
+she's examining some plants.
+she's reaching for a shopping bag.
+some cases are being unloaded in a shop.
+some instruments have been placed on stands.
+some guitars are being tuned by musicians.
+some speakers have been set up on a stage.
+a man is wearing glasses.
+crates are being unloaded from a forklift.
+visitors are entering a warehouse.
+a crew is unpacking goods from some boxes.
+the lawn is being mowed.
+a trash can is located next to a bench.
+a rain shelter is covering the seating area.
+a brick wall runs along a walkway.
+a man is putting away some crutches.
+two people are looking at each other.
+a woman is monitoring a patient.
+they are entering an elevator.
+she's reaching toward the grass.
+she's looking up at an object.
+she's putting on a cap.
+she's smiling at a classmate.
+the woman are examining a medical chart together.
+one of the women is wearing a lab coat.
+the women are working in a hospital.
+one woman is pushing the other in a wheelchair.
+a closet is being locked.
+some plates are set on a table.
+there is an empty shelf in a cabinet.
+a cupboard is filled with tableware.
+an intersection has been closed off.
+some workers are painting lines on the road.
+all the people are wearing raincoats.
+pedestrians are using a crosswalk.
+a worker is wearing boots.
+a worker is inspecting the engine.
+a worker is going up a ladder.
+a worker is driving a vechile.
+the woman is pointing at a document.
+the man is leaving a construction site.
+the woman is rolling up the paper.
+the people are piling up some lumber.
+a bridge is being built over a river.
+they are walking two by two.
+they are hiking in a forest.
+a girl is carrying a trekking pole.
+some containers have been placed on the counter.
+kitchen appliances are being wrapped up.
+packing materials have been put on display in a shop.
+some boxes are stacked up in a moving truck.
+he's entering an office building.
+he's arriving at an airport.
+he's signaling to someone.
+he's reading a newspaper.
+a large metal box is being lowered onto a truck.
+some heavy machinery is being cleaned by a worker.
+a cruise ship is entering a port.
+a container has been marked with paint.
+she is purchasing a guitar.
+she is adjusting a music stand.
+she is singing into a microphone.
+she is playing an instrument.
+they are strolling along a river.
+they are walking in the same direction.
+some campers are setting up tents.
+a road is being paved with gavel.
+she is holding an image with both hands.
+she is wearing a necklace.
+she is looking at a model of a skull.
+she is folding her arms.
+a mirror is above a fireplace.
+a light fixture hangs from the ceiling.
+the floor has been covered in carpeting.
+a table is being placed in a corridor.
+they are giving a presentation.
+they are shaking each other's hands.
+they are seated in a row.
+they are waving to a speaker.
+the man is opening the car door.
+the man is using a tool. 
+the man is polishing the vehicle.
+the man is carrying a tire.
+one of the women is pouring some water.
+two people are seated outdoors.
+a man is drinking a beverage.
+a waitress is bringing some food.
+some pillows are stacked on a table.
+a tray has been set on the bed.
+a cup is being filled with coffee.
+some bread is being placed on a plate.
+two people are doing exercise.
+they are both wearing gloves.
+a mover is carrying some furniture.
+a woman is moving a small box.
+buildings overlook a waterway.
+a statue stands on a pedestal.
+a long railing is being constructed.
+a sculpture is on display indoors.
+a woman is applying some makeup.
+a woman is getting a haircut.
+a woman is entering a hair salon.
+a woman is washing her hair.
+the people are walking along the dock.
+one of the men is grabbing the side of the boat.
+people are padding the boat with oars.
+one of the women is seated inside the boat.
+a man is holding a pen.
+a monitor has been attached to the wall.
+a woman is looking at a man.
+some images are displayed on a screen.
+a house is being constructed.
+all of the blocks have been piled up.
+bricks have been spread out on the grass.
+dirt is being removed by contruction workers.
+a man has been placed on a bed.
+they are brushing their teeth.
+a patient is closing her eyes.
+the workers are wearing masks.
+timber is being cut by a worker.
+a vehicle has been parked under some trees.
+tree trunks have been stacked on the ground.
+logs have been placed on a truck.
+she is fixing a microscope.
+she is holding a pen in her right hand.
+she is typing on a keyboard.
+she is holding a microphone.
+they are exercising indoors.
+they are facing opposite dicrections.
+they are running around an athletic track.
+they are dressed in formal clothing.
+some packages have been set on the floor.
+various envelops are being sorted.
+mail has been left in front of the door.
+letters are being removed in a mailbox.
+a woman is putting on workout gear.
+a woman is doing some exercises.
+a woman is filling a water bottle.
+a woman is drinking a beverage.
+the woman is serving a meal.
+the woman is picking some vegetables.
+the woman is slicing some produce.
+the woman is cleaning a cutting board.
+some farm equipment is being operated.
+a man is resting under some trees.
+the grass is being cut with a lawn mower.
+a man is walking through a field.
+baggage is being carried on a cart.
+luggage is being examined by a security officer.
+the bags have been placed next to a pillar.
+the suitcases have been stacked up.
+a man is wearing an apron.
+one of the women is placing pots  on the floor.
+one of the women is pointing at a poster.
+both women are looking at the man.
+she is stepping on some stones.
+she is throwing rocks into the lake.
+she is putting on a hat and gloves.
+she is strolling along a path.
+a woman is typing on a computer.
+the photocopier is standing against a wall.
+a woman is holding some paper.
+some wires are connected to the machine.
+tea is being poured into a cup.
+some napkins are lying on the plates.
+sandwiches are being prepared on a countertop.
+some food has been left on a table.
+the men are giving a presentation to an audience.
+one of the men is writing on a whiteboard.
+the men are distributing books in a classroom.
+one of the men is handing a marker to the other.
+a woman is holding a plate.
+a woman is standing underneath a picture.
+a woman is painting on a canvas.
+a woman is admiring some artwork.
+people have been soaked in the rain.
+two children are playing in a forest.
+some people are running toward a cabin.
+hikers are walking on a stone pathway.
+nháº­p tiáº¿ng anh
+nháº­p tiáº¿ng anh
+nháº­p tiáº¿ng anh
+nháº­p tiáº¿ng anh
+nháº­p tiáº¿ng anh
+nháº­p tiáº¿ng anh
+he is operating a computer.
+he is inspecting an item for sale.
+he is looking through some files..
+he is dressed formally.
+he is mopping the floor.
+he is lifting a suitcase.
+he is bending over the bag.
+he is unpacking a trunk.
+a micro phone has been set up on a stage.
+some equipment has been arranged in a studio.
+a man is turning up the volume.
+a seat is being adjusted.
+some papers are scattered under the table.
+the file folders are being placed on the desk.
+most of the bookcases are empty.
+the area is stocked with many office supplies.
+waves are crashing on the shore.
+some people are swimming in the ocean.
+a boat is moving through the water.
+the rocks rise above the water.
+the suspension bridge has been built over the water.
+a bridge spans the stream.
+railing is being installed along the bridge.
+people are walking toward an archway.
+a man is addressing the audience.
+all of the seats are occupied.
+a man is delivering a speech outdoors.
+the micro phone is being adjusted.
+they are participating in a competition.
+they are moving down the slope.
+they are climbing a mnountain.
+they are wearing backpacks.
+a floor is being illuminated by an electric light.
+the cables are hanging from the ceiling.
+light is streaming in through the windown.
+the room is being cleaned.
+a woman is pouring water into a cup.
+some branches have fallen onto the grass.
+a tent is being erected.
+liquid is being poured into a container.
+null
+null
+null
+null
+they're sitting on a bench.
+they're lying on the grass.
+they're riding their bicycles.
+they're swimming in the water.
+one of the men is putting on a tie.
+one of the men is standing at a counter.
+one of the men is setting a briefcase on the floor.
+one of the men is typing on a computer.
+customers are waiting to be seated.
+cars are parked along the street.
+a restaurant worker is sweeping the sidewalk.
+diners are sitting in an outdoor cafe.
+the man is taking some paper out of a printer.
+the man is putting a file in a drawer.
+the woman is signing her name.
+the people are reviewing a document.
+a man is unloading some packages.
+a man is resting in a shopping mall.
+boxes have been piled onto some carts .
+items are being arranged in a store.
+a sign is hanging above some artwork.
+plants are arranged on a stairway.
+a round table is surrounded by chairs.
+an area rug has been rolled up.
+a man is placing a basket on a shelf.
+labels have been attached to shelving units.
+a man is opening the door of a cabinet.
+some newspapers have been piled on the floor.
+lampposts are standing in a-row.
+a crowd of people has gathered on a beach.
+a garden has been planted on a rooftop.
+the roadway is full of vehicles.
+an employee is organizing a shoe display.
+merchandise is being put into a bag.
+some footwear is being scanned by a cashier.
+a customer is trying on a pair of shoes.
+trees are growing under an archway.
+passengers are waiting to board a train .
+a high wall runs alongside the train tracks.
+a train is about to go over a bridge.
+he's writing a letter.
+he's reading a book.
+he's serving some food.
+he's holding a piece of paper.
+a woman is arranging the shelves.
+a woman is standing at the board.
+a woman is watering a plant.
+a woman is washing a window.
+he's looking at his watch.
+he's talking on the phone.
+he's walking outside.
+he's opening a box.
+she's tidying her room.
+she's brushing her teeth.
+she's sweeping the deck.
+she's scrubbing the pots.
+the women are in a parking lot.
+the women are shopping for clothes.
+the women are in a supermarket.
+the women are paying for food.
+they're resting in waiting area.
+they're boarding an airplane.
+they're waiting in line.
+they're packing a suitcase.
+a painting is hanging on the wall.
+some people are eating a meal.
+the table is being cleared.
+a lamp is being turned off.
+the woman is taking a picture.
+the woman is reading as she walks.
+the boy is holding the woman's hand.
+the boy is playing in the bushes.
+the motorcycle has been parked.
+the motorcycle is being ridden.
+a tire has been removed from the motorcycle.
+the seat of the motorcycle is being repaired.
+they're delivering a presentation.
+they're moving a piece of furniture.
+they're adjusting a pull-down screen.
+they're connecting a computer cable.
+she's taking a photograph.
+she's picking up a pencil.
+she's painting a picture.
+she's turning a page.
+he's looking at the engine.
+he's reading a manual.
+he's turning on the water.
+he's driving a car.
+some bags are on display.
+the closet has been emptied.
+the shelves are filled with boxes.
+some clothes are lying on the floor.
+she's turning on a light.
+she's sitting in front of a machine.
+she's buying some equipment.
+she's trying on a jacket.
+the chairs are stacked against the wall.
+people are stepping into the water.
+waiters are standing at the gate.
+the tables are arranged in a row.
+they're having a conversation.
+they're reading side by side.
+they're writing in notebooks.
+they're climbing the steps.
+he's throwing some fish into the water.
+he's swimming in the ocean.
+he's looking over the side of a boat.
+he's standing in the water.
+some cars are parked along a street.
+some trees are being planted.
+traffic is being directed by an officer.
+the buildings are being washed.
+he's placing an item on the scale.
+he's wearing protective clothing.
+he's removing something from a jar.
+he's walking to a laboratory.
+a work area has been roped off.
+traffic cones are piled on top of one another.
+there is a ladder leaning against the building.
+the worker is closing the doors of the van.
+he's walking around the office.
+he's putting on his jacket.
+he's working at his desk.
+he's picking up a cup.
+the bicycles are lying on the ground.
+the people are driving their cars down the road.
+the bicycles are parked in front of the buildings.
+the people are riding their bicycles along the street.
+the man is moving some chairs.
+the people are eating in a restaurant.
+the waiter is serving some sandwiches.
+the woman is ordering her meal.
+the stairs have been carpeted.
+the woman is going upstairs.
+the railing has been removed.
+the window is being cleaned.
+the swimmers arein the water.
+the boats are out to sea.
+the pedestrians are crossing the bridge.
+some people are standing on the shore.
+they're setting the table for a meal.
+they're concentrating on some documents.
+they're taking off their glasses.
+they're taking their seats for a meeting.
+the shopkeeper is lining up some goods for sale.
+the man is holding some reading material.
+the shopper is picking out clothes from the rack.
+the man is folding the merchandise on the table.
+the books have been arranged in piles.
+the bookshelves have fallen over.
+the cart has been turned on its side.
+the files have been stacked on the bookshelf.
+the man is building a brick wall.
+the man is taking off his cap.
+some weeds are wowing next to a wall.
+some trees are being planted in-pots.
+the pins have been pressed into the board.
+the cups have been left to dry.
+the closet is full of boxes.
+pencils have been arranged in containers.
+the signs are being painted.
+the building is under construction.
+the bicyclists are riding through the streets.
+some cars are parked on the. street.
+they're waiting in line together.
+they're playing a game outdoors.
+they're sitting at the dentist's office.
+they're opening the gate.
+a man is fishing from the shore.
+the beach is crowded with swimmers.
+the fishermen are pulling in their nets.
+the man is cooking a fish.
+the woman has left her seat.
+the men are leaning across the table.
+there is a pair of sunglasses on the table.
+the woman is putting some flowers in a vase.
+there's a chair next tothe beds.
+there are no pillows on the bed.
+there's a stack of sheets on the shelf.
+there's a picture above the beds.
+the handrails are being potished.
+the. people are seated on the steps.
+the people are going up to the next floor.
+the workers are cleaning the walkway.
+the man is throwing away some posters.
+a picture is being hung on the wall.
+the man is reaching down to pick up some tape.
+a railing has been placed along the street.
+she's stapling some documents together.
+she's doing some paperwork.
+she's looking over her shoulder.
+she's riding to the office.
+the taller ladder is propped up against the building.
+the man is putting away the ladder.
+the windows are closed because of the cold weather.
+the man is planting a flower garden in front of the house.
+the waiter is setting up some chairs at each table.
+potted plants have been arranged along the border of the patio.
+some customers are sharing a seat on a bench.
+the tablecloths have been removed for the evening.
+they're shaking hands.
+they're waving to one another.
+they're walking around a tree.
+they're walking side by side.
+he's riding a motorcycle.
+he's walking to the bike shop.
+he's working in a repair shop.
+he's getting a tool from a shelf.
+customers are lined up to pay for their books.
+the people are standing at.a table.
+there are boxes stacked on the table.
+many books are on display.
+he's sorting papers into a pile.
+he's straightening his tie.
+he's leaning over his desk.
+he's opening a folder in front of him.
+the traffic is moving through the city.
+the vehicles are entering the tunnel.
+the buses are parked in a row.
+the buildings have no windows.
+they're building a fence.
+they're setting up chairs.
+they're camping in tents.
+they're using umbrellas.
+he's fishing from a boat.
+he's looking at a pile of fish.
+he's eating from a dish.
+he's standing on a scale.
+the bed has not been made today.
+the curtains have been closed.
+there's a picture hanging on the wall.
+there's a lamp at the foot of the bed.
+people are waiting next to the vehicle.
+the vehicle is pulling into a garage.
+the vehicle's windows are being cleaned.
+people are crossing the street.
+the tables in the restaurant are round.
+the chairs have been pushed in.
+the restaurant is full of diners.
+there's a window next to the door.
+she's cooking a meal.
+she's walking around a farm.
+she's shopping for food.
+she's eating a salad.
+they're talking on the phone.
+they're moving some furniture.
+they're reading some books.
+they're standing by a table.
+he's climbing into a truck.
+he's entering a store.
+he's getting on a train.
+he's locking up a drawer.
+she's opening a box.
+she's putting on boots.
+she's folding some paper..
+she's holding a book.
+they're meeting in a restaurant.
+they're looking at the computer.
+they're examining a document.
+they're filing some forms.
+the man is pushing a cart.
+the man is taking a break.
+the man is leaving the store.
+the man is closing the door.
+some peopleÂ·are sitting outside.
+some people are watching a movie.
+some people are cutting the grass.
+some people are planting trees.
+the men are adjusting microphones.
+the men are playing music together.
+the men are listening to a lecture.
+the men are working in the garden.
+there are pictures on the wall.
+the tables are covered with tablecloths.
+the chairs are being put away.
+the piano is being played.
+the baskets are empty.
+there are baked goods on shelves.
+the cabinets are being repaired.
+they're buying some bread.
+they're looking into a store.
+they're walking out of a shop.
+they're trying on some shoes.
+they're washing a window.
+he's holding a hat.
+he's greeting someone.
+he's taking a bite of food.
+he's selling sandwiches.
+the man is writing in a notebook.
+the women are handing out papers.
+the people are facing a board.
+a group is entering an office
+they're displaying watches on a table.
+they're spreading a cloth on a table.
+a game's being played on a table.
+a table's been pushed against a door.
+cheese is being wrapped for a customer.
+cheese has been packed into cartons.
+labels are being attached to pieces of cheese.
+cheese has been cut into different sizes.
+pedestrians are crossing the street.
+some vehicles are stopped in traffic.
+goods are being unloaded from a truck.
+some people are getting off their motorbikes.
+the woman is unplugging an appliance.
+some dishes are being placed in a cabinet.
+the woman is emptying out the contents of a cup.
+the kitchen plumbing is being repaired.
+the furniture is being rearranged.
+the carpet has been rolled up in the corner.
+some pillows are stacked beside a bed.
+bedding has been folded and placed on a mattress.
+some chairs are lined up by the side of a swimming pool.
+a tugboat is pulling a ship out to sea.
+umbrellas are sheltering people from the rain.
+leaves are being removed from the pool.
+workers are taking a tank out of a building.
+plastic sheets cover a building frame.
+stepladders are being set up in a tent.
+some workers are trimming pieces of wood.
+he's carrying a box.
+he's closing a cabinet.
+he's cleaning a window.
+he's filing a document.
+people are standing behind a railing.
+people are putting bricks in a pile.
+people are crossing the street at an intersection.
+people are waiting under a bridge.
+the women are holding a scarf.
+the women are hanging a mirror.
+onewoman is trying on hats.
+one woman is looking at her reflection.
+a man's building a fence.
+a man's washing a road with a hose.
+a man's watering plants in a garden.
+a man's sweeping the walkway.
+a woman's showing aÂ· man something on the screen.
+a woman's pointing at a cup on the desk.
+a man's inserting some paper into the printer.
+some people are moving a computer to the desk.
+plates have been set in the sink.
+eating utensils have been arranged in a tray.
+dishes have been placed in a cupboard.
+tools have been left under a counter.
+all of the seats are stacked up against the wall.
+the tables are covered with tablecloths.
+waiters are serving beveraqes to the customers.
+some people are seated across from each other at the table.
+some wires are coiled on the ground.
+goods are being transported through a forest.
+trucks have been parked inside a warehouse.
+the vehicles are facing in the same direction.
+waves are crashing against the deck.
+tourists are swimming in a pool.
+people are gathering on some rocks.
+stones are being lined up on a bench.
+they're installing some light fixtures.
+they're writing reports in a classroom.
+they're adjusting a microphone on a stage.
+they're examining some laboratory equipment.
+he's talking on the telephone.
+he's drinking from a cup.
+he's typing on a laptop.
+he's reading a newspaper.
+a vehicle is stopped on the street.
+people are crossing a road.
+a woman is riding a bicycle through a park.
+a vendor is selling flowers near a bus stop.
+a man's folding a napkin.
+a man's putting silverware on a plate.
+a man's holding a menu.
+a man's sitting in a restaurant.
+one of the women has a water bottle in her hand.
+one of the women has a briefcase on her lap.
+the women are sitting next to each other on a sofa.
+the women are watching a presentation.
+food is being served to some customers.
+a woman is handing money to a cashier.
+trays are being carried to a sink.
+a man is putting on an apron.
+a cart is being wheeled across the room.
+some stools have been placed upside down.
+a television is attached to the wall.
+some chairs are arranged in a circle.
+a wooden fence is being repaired.
+bushes line a walkway.
+a man is planting some seeds in a garden.
+a man is cuttinq.a tree into pieces.
+a model of a house has been set up on a table.
+a woman is removing books from a shelf.
+some people are looking at a painting.
+shoppers are lining up at a cash register.
+a man is installing a video camera.
+a cabinet door has been left open.
+the people are watching some monitors.
+electronics are being sold in a store.
+a salesperson is reaching into a display case.
+merchandise is being packed into boxes.
+a customer is taking a hat off a counter.
+tags have been attached to some hats.
+a man is typing on a keyboard.
+a man is reaching for a water bottle.
+a man is putting on a necktie.
+a man is talking on the phone.
+she's stacking some dishes.
+she's spreading out a tablecloth.
+she's pouring a cup of tea.
+she's setting down a plate of food.
+they're having lunch outdoors.
+they're walking next to each other.
+they're working in the garden.
+they're exiting a building.
+they're reading in a waiting room.
+they're taking newspapers from a table.
+the woman is watering a plant.
+the man is hanging a picture on the wall.
+a customer is purchasing a beverage.
+the cashier is opening a cash register.
+a customer is sipping from a coffee mug.
+the cashier is bagging some items.
+he's operating some factory machinery.
+he's turning on a light switch.
+he's adjusting his face mask.
+he's unplugging a power cord.
+the women are sewing some clothing.
+the women are arranging purses for a display.
+racks of clothing are positioned along a wall.
+some dresses have been folded on a shelf.
+a man is setting up a podium.
+presenters are seated in front of microphones.
+trophies are being distributed at an awards ceremony.
+a performer is bowing before an audience.
+a dining tray has been placed on a counter.
+decorative lamps have been fastened to the ceiling.
+a large painting has been hung over a desk.
+armchairs are located on both sides of a fireplace.
+workers are landscaping a walkway.
+supplies are being wheeled on a cart.
+litter is being collected outside of a store.
+one of the men is pushing a lawn mower.
+he's using headphones.
+he's turning on a lamp.
+he's hanging up a painting.
+he's filing some papers.
+one of the women is taking off her jacket.
+some women are cleaning windows.
+one of the women is planting a tree.
+some women are sitting on a bench.
+the man is placing flowers in a vase.
+the man is wiping off the table.
+one of the women is picking up a glass.
+one of the women is pouring some water.
+one of the men is holding a mirror.
+one of the men is buying a bottle of shampoo.
+one of the men is wearing a wristwatch.
+one of the men is washing his hair.
+the woman is mailing a package.
+the woman is dusting the top of a rack.
+some pots have been stacked in a corner.
+some boxes have been stored on shelves.
+a woman is pointing at her computer monitor.
+a man is leaning on a counter.
+a desk is being assembled.
+some drawers have been left open.
+she's holding onto a railing.
+she's walking along a street.
+she's stepping onto a platform.
+she's passing under a bridge.
+some boats are fastened to a pier.
+some people are fishing from a dock.
+one of the boats is being launched from the shore.
+a sail has been raised above a ship.
+some carts have been collected under an awning.
+a passenger is emerging from a vehicle.
+shopping bags litter a vacant parking lot.
+shoppers are loading their purchases into a car.
+some people are serving refreshments.
+some people are ordering food from menus.
+the men are exchanging a greeting.
+two women are flipping through their notepads.
+a man's leaning against a bench.
+a man's passing through a doorway.
+a man's sweeping the pavement.
+a man's pulling a cart.
+some folders have been set on top of a briefcase.
+the people are talking on telephones.
+one of the men is unlocking a door.
+one of the men is pointing at a document.
+the woman is lowering a window shade.
+the woman is sending a text message.
+the woman is taking notes by hand.
+the woman is browsing through some magazines.
+he's repairing a net.
+he's folding a sail.
+he's tying a boat to a pier.
+he's holding onto a railing.
+cooks are placing items in a freezer.
+workers are remodeling a kitchen.
+meals are being served in a dining room.
+food is being prepared in a restaurant.
+leaves have been collected in a pile.
+potted plants have been organized in rows.
+a truck is being parked on a lawn.
+a man is moving some boxes.
+some women are loading groceries into a car.
+some women are getting into a vehicle.
+a woman is adjusting a rearview mirror.
+a woman is driving through a parking area.
+there's a shelving unit against the wall.
+there are folding chairs stacked on the floor.
+a floor lamp stands beside a desk.
+reading materials are scattered on a table.
+a man is on a platform in front of an audience.
+a performer is climbing the steps onto a stage.
+some people are lined up on a staircase.
+a worker is hammering wooden boards onto a roof.
+some merchandise has been hung outside a shop.
+a variety of handbags has been arranged for display.
+one of the women is buttoning up her coat.
+one of the women is carrying a package into a building.
+they're eating in a cafe.
+they're cutting the grass.
+they're setting up a tent.
+they're sitting on the ground.
+he's watering the plants.
+he's holding a rake.
+he's digging a hole.
+he's pouring a drink
+they're using some computers.
+they're facing each other.
+they're standing at a desk.
+they're buying some equipment.
+she's carrying some books.
+she's wiping the shelves.
+she's reading a magazine.
+she's folding her hands.
+they're taking off their glasses.
+they're examining a document.
+they're entering a restaurant.
+they're leaning on a rail.
+some people are building benches.
+some people are resting in a park.
+some people are crossing the road.
+some people are watching a race.
+the man's placing some food in an oven.
+the man's washing some dishes.
+the man's handing a spoon to a customer.
+the man's preparing a plate of food.
+vehicles are passing over a bridge.
+there's a walkway above a street.
+passengers are stepping off a bus.
+some cars are parked in a garage.
+a worker is laying floor tiles.
+a woman's wearing a long skirt.
+people are hanging up some posters.
+people are playing cards.
+some tables are stacked in a pile.
+the tables are being rearranged.
+a cord is being plugged in.
+the wall is being painted.
+he's shopping at a store.
+he's washing a pan.
+he's cooking in a kitchen.
+he's eating a sandwich.
+they're facing each other.
+they're looking out the window.
+they're reading a book.
+they're sharing a meal.
+she's drinking from a fountain.
+she's leaning forward to write something.
+she's buttoning up her coat.
+she's tying a knot in a scarf.
+the students are walking around.
+the teacher is distributing papers.
+the students are cleaning a chalkboard.
+the teacher is holding up an object.
+some people are leaving a platform.
+some people are setting up equipment.
+some people are playing musical instruments.
+some people are singing into microphones.
+a man is walking toward a plane.
+a stairway is being moved away from the plane.
+a plane is taking off from an airport.
+a trailer is being driven past a plane.
+the man's counting some boxes.
+the cash register has been opened.
+some merchandise is being set on a shelf.
+a worker is scrubbing the counters.
+there's a pile of tires on the ground.
+a vehicle's being repaired.
+earth is being shoveled into a truck.
+there's a shadow on the wall.
+signs are displayed on the cabinet doors.
+some glasses have been left near the sink.
+a coffee machine has been placed on the counter.
+the containers have been filled with water.
+they're working in a wooded area.
+a child is gathering leaves in a park.
+the woman's reaching to pick up a branch.
+they're strolling along a tree-lined path.
+she's closing the door. 
+she's lying on the sofa. 
+she's holding a piece of paper. 
+she's writing a letter. 
+there's a clock in the tower. 
+there's a towel hanging outside. 
+there's a person on the balcony. 
+there's a watch next to the window. 
+he's reading a magazine. 
+he's putting up a display case. 
+he's getting into a vehicle. 
+he's looking at a sign. 
+they're working together at a desk. 
+they're  helping each other move a computer. 
+they're hanging decorations. 
+they're arranging some furniture in a room. 
+he's parking a car. 
+he's pushing a wheelbarrow. 
+he's putting air into a tire. 
+he's stacking boxes. 
+they're walking on a path. 
+they're cutting the grass. 
+they're looking at their maps. 
+they're sitting in a circle. 
+he's installing bookshelves. 
+he's storing his papers in boxes. 
+he's taking a volume from the shelf. 
+he's wrapping a book in paper. 
+chairs have been stacked in the corner of the room. 
+the silverware is being polished. 
+water is being poured into the glasses. 
+the table has been set for a meal. 
+he's shoveling the snow. 
+he's  riding on a sled. 
+he's zipping up his jacket. 
+he's wearing a hat. 
+a ship is passing under the bridge. 
+water is flowing out of a pipe. 
+the bridge has many vehicles on it. 
+some people are standing on the bridge. 
+they're looking at the screen.
+they're sitting next to each other.
+they're organizing the desk.
+they're decorating the walls.
+she's opening some shoe boxes.
+she's holding a shoe.
+she's putting up a shelf.
+she's carrying a handbag.
+he's wearing a tool belt.
+he's going into a house.
+he's carrying some wood.
+he's taking off his hat.
+trees are being transported down the river.
+buildings are overlooking the water.
+boats are passing under the bridge.
+children are playing in the fields.
+he's turning on a machine.
+he's rolling up his sleeves.
+he's holding an electrical cord.
+he's folding his jacket.
+the women are assembling a desk.
+a woman is writing in a notebook.
+some books are spread out on the floor.
+a customer is paying for some merchandise.
+a presentation is being made.
+they're painting the walls.
+one man is holding the back of a chair.
+cabinets are being installed.
+she's reaching for a book.
+she's operating a machine.
+she's turning the pages of a newspaper.
+she's putting up some wallpaper.
+the driver is checking the engine.
+some tires are being repaired.
+some workers are opening boxes.
+the truck is parked next to containers.
+the men are wearing work vests.
+the men are installing a shelf.
+the men are directing traffic.
+the men are working outdoors.
+he's opening a briefcase.
+he's wearing a hat.
+he's piloting a plane.
+he's sweeping the ground.
+the man is writing on a sheet of paper.
+the man is pulling a drawer open.
+the man is wrapping gifts.
+the man is installing shelves.
+she's opening a box.
+she's pulling a cart.
+she's cleaning a floor.
+she's pushing a button.
+they're working in a shop.
+they're climbing some steps.
+they're walking outdoors.
+they're laying bricks.
+the people are eating the pies.
+the desserts are on display.
+the prices are clearly visible.
+the pies are being sliced.
+a man is painting a picture.
+a man is paying for a purchase.
+a man is hanging up a photograph.
+a man is adjusting a camera.
+the man is fixing his watch.
+the bicycle is lying on the ground.
+the man is cleaning the shop.
+the bicycle is in a repair shop.
+the woman's hands are in her pockets.
+the woman is kneeling in the garden.
+the woman's hat is on the ground.
+the woman is surrounded by flowers.
+he's packing his luggage.
+he's picking up his briefcase.
+he's working on a laptop computer.
+he's comparing two computers.
+the woman is getting a cup of coffee.
+the woman is sitting near the machine.
+the woman is picking up a document.
+the woman is unplugging the machine.
+she's washing her hands.
+she's wearing gloves.
+she's fixing her hair.
+she's putting on her coat.
+they're handing out cups.
+they're having a discussion.
+they're taking off their glasses.
+they're sitting in a conference room.
+a man is folding a paper.
+a woman is taking notes.
+some people are being shown to their seats.
+some people are looking out the window.
+they're paging through notebooks.
+they're reaching for their plates.
+they're sitting next to one another.
+they're serving food and drinks.
+the airplanes are in the building.
+the airplanes are flying at a high altitude.
+the airplanes are taking off.
+the airplanes are parked on the ground.
+he's reaching into a bookcase.
+he's lifting some furniture.
+he's adjusting a wire.
+he's cutting a hole in a piece of wood.
+the man and woman are checking their luggage.
+the woman is writing on the board.
+the woman is presenting a book to the man.
+the man has a bag over his shoulder.
+she's hanging up curtains.
+she's putting on a hat.
+she's filling up a cup.
+she's looking at a picture.
+he's moving baggage down the steps.
+he's carrying suitcases in both hands.
+he's taking suitcases from a vehicle.
+he's standing next to a baggage trolley.
+the chairs are folded against the wall.
+the audience is sitting down.
+the chairs have been arranged in rows.
+the presentation has begun.
+they're hanging some photographs.
+they're having a meeting.
+they're setting their watches.
+they're shaking hands.
+the lamp has been placed by the window.
+the beds have been pushed together.
+there's a window above each bed.
+there's a lamp between the beds.
+the woman is working on a painting.
+the woman is viewing art in a museum.
+the woman is buying a picture.
+the woman and man are discussing some artwork.
+the crates are empty.
+the vegetables are being weighed.
+the goods are on display.
+the bottles have been opened.
+the boat is full of people.
+the boat is tied at the dock.
+some boats are passing each other on the water.
+there are many cars next to the river.
+he's choosing a tie.
+he's arranging the chairs.
+he's setting the table.
+he's examining a document.
+the office is stocked with supplies.
+someone is working at the computer.
+supplies are being unloaded in the warehouse.
+the shelves in the office are empty.
+they're carrying the ladder.
+one man is opening a can of paint.
+they're climbing onto the roof.
+one man is using a long pole.
+the fountain is spraying water into the air.
+people are swimming in the pool.
+water is flowing down the mountain.
+children are drinking from the water fountain.
+the woman is reaching inside the cabinet.
+the door to the clothes closet is open.
+the workers are putting away their equipment.
+the lab technician is locking the door.
+they're waiting in a line.
+they're removing items from their bags.
+they're turning on the lights.
+they're looking at each other.
+they're stopped in front of an outdoor shop.
+they're looking through the store windows.
+they're taking a class.
+they're unloading the sunglasses.
+the man is filling a spray bottle.
+the man is cleaning the floor.
+there are cabinets under the counter.
+the drawers are open.
+she's alone in the art gallery.
+she's holding a large pile of books.
+she's looking up at a painting.
+she's taking a photograph of some artwork.
+two men are racing their bicycles through the park.
+some people are seated on the benches.
+a man is feeding the birds by hand.
+there's a grassy area beside the path.
+people are watching fish.
+people are fishing.
+people are driving.
+people are washing cars.
+they're examining some documents.
+they're tearing up sheets of paper.
+they're watching a slideshow.
+they're pointing to charts on the wall.
+one man is leaning on a podium.
+one man is writing in a notebook.
+one man is taking a map down from the wall.
+one man is near the corner of the room.
+a man is building a boat by the water.
+a man is tying up a boat at the dock.
+the boats have been caught in a storm.
+the boats have been taken out on the water.
+the table is covered with a cloth.
+the chairs are unoccupied.
+the carpet is being cleaned.
+the sofa is outdoors.
+a man's walking down an escalator.
+a man's wrapping some merchandise.
+some people are cleaning the floor.
+some people are seated next to an escalator.
+a woman is opening an umbrella.
+customers are shopping in an open-air market.
+a vendor is reaching into a display case.
+some people are bicycling through a market.
+she's jotting down notes on a notepad.
+she's arranging some flowers in a vase.
+she's attaching items to a bulletin board.
+she's moving her computer monitor.
+some people are climbing the stairs.
+some people are leaning against a railing.
+a woman is reading on a bench.
+a man is working in a garden.
+a framed picture is hanging above a doorway.
+a sofa has been positioned across from a window.
+a television has been set on a bookshelf.
+some books have been stacked on a table.
+the vehicles are all traveling in the same direction.
+a traffic signal is suspended above an intersection.
+painted lines separate the lanes of traffic.
+a high-rise building is being erected near a busy roadway.
+an instrument has been left on a piano.
+the floor is partially covered by a rug.
+a music stand is being adjusted.
+a stage is being prepared for a concert.
+some boards have been piled on a deck.
+workers are fastening their helmets.
+a ladder has been placed next to a vertical beam.
+pipes are being carried up some steps.
+he's filing some folders.
+he's holding a cardboard box.
+he's stacking some magazines.
+he's turning on a television.
+a horse is resting by a tree.
+a horse is entering a barn.
+there's a car in the driveway.
+there's a fence near a building.
+they're reading some newspapers.
+they're moving some furniture.
+they're facing each other.
+they're opening their briefcases.
+some men are looking at menus.
+some men are preparing a meal.
+a waiter is writing down an order.
+a waiter is carrying some glasses.
+a woman is pushing a shopping cart.
+customers are approaching a cash register.
+a man is paying for a purchase.
+a man is selecting an item from a display.
+an audience has filled a movie theater.
+spectators are attending a sporting event.
+vendors are climbing some stairs.
+the players are leaving the field.
+an instrument case is lying on the floor.
+a bookcase is between two benches.
+some shoes are being placed into boxes.
+a rug is laid out in front of a window.
+people have gathered by a fountain.
+people are strolling through an outdoor market.
+some sacks are being unloaded from a truck.
+workers are hanging out laundry to dry.
+a shelving unit is being installed.
+a woman is bending down to read a label.
+a stack of cups is covered in plastic packaging.
+a woman is serving beverages in cups.
+scaffolding has been erected next to an exterior wall.
+a worker is burying pipes in the ground.
+steps have been constructed from stone blocks.
+cement is being poured at a construction site.
+they're lifting a desk.
+they're opening a package.
+they're carrying a box.
+they're walking outside.
+some planes are on the ground.
+a plane is taking off from a runway.
+some trucks are at an intersection.
+a truck is coming out of a garage.
+the man is standing next to a bench.
+flowers are being arranged in pots.
+some people are walking through a doorway.
+the man is handing the woman a camera.
+a woman is shaking hands with a man.
+a woman is holding some sheets of paper.
+a woman is taking notes on a board.
+a woman is passing a briefcase to a man.
+he's putting away some tools.
+he's trying on a pair of shoes.
+he's adjusting his eyeglasses.
+he's repairing a shoe.
+some people are riding bikes on a brick road.
+some bikes are leaning against a wall.
+some bikes are parked in a long row.
+some people are looking at bikes in a shop.
+a table has been set with dishes.
+the shelves of a bookcase are empty.
+some pictures have been placed on the floor.
+a couch has been pushed to one side of the room.
+some people are entering an auditorium.
+some people are seated in a circle.
+a man is distributing some books.
+a man is addressing a small group of people.
+streetlamps are being installed in a parking area.
+cars are being driven across a bridge.
+people have gathered near a building.
+a bridge has been closed for construction work.
+recording equipment is being moved onto a stage.
+some women are practicing their instruments.
+chairs are being arranged in a classroom.
+one of the musicians is turning a page.
+the men are putting on headphones.
+the men are getting up from their chairs.
+the men are looking at a computer screen.
+the men are moving some furniture.
+a woman is typing on a keyboard.
+a woman is pointing to a document.
+a woman is closing a binder.
+a woman is drawing in a notebook.
+people are shopping in a grocery store.
+people are seated at tables.
+people are watching a performance.
+people are walking on a crowded street.
+she's stacking chairs near the door.
+she's operating a machine.
+she's entering an office.
+she's placing files in a cabinet.
+some men are packing their suitcases.
+some men are touring a factory.
+some men are waiting near a vehicle.
+some men are storing luggage above their seats.
+shelves have been stocked with books.
+boxes are being set on the floor.
+a woman is stepping onto a ladder.
+a woman is posting a sign.
+a train is going through a tunnel.
+a train station is being renovated.
+there is a railing beside the train track.
+the doors of the train are closing.
+a man is paying at the cash register.
+drinks are lined up in a display case.
+dishes are being cleared from the counter.
+diners are ordering food at a restaurant.
+a worker is unloading supplies from a truck.
+a worker is driving past a warehouse entrance.
+some tires have been piled onto a platform.
+some materials are being transported on a forklift.
+they're spreading out a net.
+they're tying a boat to the dock.
+they're fishing from the side of a boat.
+they're folding up a tent.
+the man's holding a wallet.
+the man's painting a picture.
+the man's brushing his hair.
+the man's sweeping with a broom.
+the woman's picking up a bag.
+the woman's carrying some flowers.
+the woman's throwing something away .
+the woman's sitting outdoors.
+the men are passing a plate of food.
+the men are washing some dishes.
+the men are exchanging money.
+the men are cooking dinner.
+artwork is being taken off the wall.
+a plant has fallen over on the floor.
+a rug is lying in front of the door.
+a package has been set in the hallway.
+they're entering separate offices.
+they're examining papers on a table.
+the woman's hung her jacket on a chair.
+the man's watching a presentation on a screen.
+some hikers are climbing a hill.
+a railing is being installed.
+some people are purchasing shirts.
+vendors are displaying their merchandise.
+some tents are being assembled.
+the chairs are shaded by umbrellas.
+tourists are relaxing on the beach.
+towels have been spread out on the sand.
+some performers are on a stage.
+an audience is seated in rows.
+tickets are being collected.
+people are exiting a theater.
+the man is removing his coat.
+the man is pushing a gate open.
+a suitcase has been left on the floor.
+a cart has been loaded with luggage.
+spectators have gathered along the street.
+a sporting event is taking place in a stadium.
+the road has been blocked by some tires.
+riders are getting on their bicycles.
+the woman is holding a handbag.
+the man is watering a plant.
+the people are moving furniture.
+the people are talking on telephones.
+he's looking into a microscope.
+he's putting on his glasses.
+he's closing a cabinet.
+he's washing some bottles.
+one woman is hanging a picture.
+books are on the shelves.
+some file drawers are open.
+the women are seated at a desk.
+airplanes are flying overhead.
+a suitcase is being pulled down a hallway.
+a man is passing by some windows.
+a man is loading a cart.
+the women are unpacking monitors.
+some people are lining up chairs.
+a man is waiting at a counter.
+a customer is reaching for some merchandise.
+a sculpture is on display outside.
+a man is running up a ramp.
+a wall has been covered in advertisements.
+a lamppost is being installed.
+workers are entering a factory.
+vehicles are parked side by side.
+a machine is pouring cement.
+a truck is being towed.
+a band is filing off a stage.
+people are performing under a tent.
+an audience is clapping for some musicians.
+women are singing next to a piano.
+equipment is being fastened to the roof of a car.
+the men are racing on an outdoor course.
+tires have been stacked on the ground.
+a bicyclist is wearing a helmet.
+fields are being plowed alongside a road.
+bouquets of flowers have been placed by a statue.
+a public monument overlooks a walkway.
+a busy street winds through a garden.
+he's carrying a shopping basket.
+he's eating some vegetables.
+he's wearing a t-shirt.
+he's picking up some flowers.
+she's jumping over a net.
+she's holding a racket.
+she's putting on her shoes.
+she's kicking a ball.
+a woman is reaching for a pen.
+a woman is wiping off a counter.
+some people are standing in line.
+some documents are being printed out.
+a man is diving off a boat.
+some boats are sailing on the water.
+some people are fishing from a dock.
+people are watching a race from the shore.
+he's inspecting some tires.
+he's opening a car door.
+he's parking in a garage.
+he's working on a vehicle.
+plants are sitting on a ledge.
+the women are looking out a window.
+one of the women is removing her glasses.
+some pictures have been placed against a wall.
+a crowd has gathered for a performance.
+some pedestrians are crossing the street.
+a man's sweeping the pavement.
+a woman's entering a clothing store.
+a machine is lifting bags onto a shelf.
+small trees have been planted in individual pots.
+soil is being poured into plastic bags.
+a field is surrounded by trees.
+safety goggles are hanging around a woman's neck.
+notes have been written on a chalkboard.
+a woman is stirring the contents of a container.
+a woman is inspecting some laboratory equipment.
+a vendor is rearranging a collection of glasses.
+a merchant is setting up a row of tables.
+customers are examining some merchandise on display.
+some people are purchasing umbrellas in a market.
+the man's looking at a notebook.
+the man's moving a table.
+the man's picking up a newspaper.
+the man's buying a pen.
+they're fixing a tire.
+they're planting some bushes.
+they're strolling down a path.
+they're riding a bicycle.
+she's cooking at the stove.
+she's arranging utensils in a drawer.
+she's opening the oven.
+she's holding some containers.
+people are climbing up a hill.
+passengers are boarding a bus.
+the steps are blocked by luggage.
+a bus is departing from a station.
+a meeting is taking place outdoors.
+some documents are being filed.
+they're seated across from each other.
+they're reviewing some drawings.
+dresses are being sewn.
+garments are being displayed.
+customers are being helped.
+clothing is being folded.
+he's removing items from a carton.
+he's stocking the shelves with beverages.
+he's putting merchandise into a basket.
+he's placing price tags on some products.
+diners are feeding some seagulls.
+they're pulling their chairs up to the table.
+some people are eating near the water.
+some food is being brought to the diners.
+one truck is transporting a load of bricks.
+a brick wall surrounds a work area.
+lines are being painted on a road.
+construction vehicles are parked in a storage facility.
+a band member is adjusting a microphone.
+musicians have packed up their horns.
+the men are polishing their instruments.
+performers have assembled under a canopy.
+they' re cleaning a desk.
+they're shaking hands.
+they're looking at a book.
+they're moving a chair.
+a truck is parked near an airplane.
+a worker is changing a tire.
+a truck is piled with luggage.
+an airplane is taking off.
+some people are riding bicycles.
+some people are standing in a group.
+some people are seated on a lawn.
+some people are gathered near a table.
+a woman is drinking from a cup.
+a woman is opening a window.
+the women are hanging a picture.
+the women are facing each other.
+the men are filling bottles at a sink.
+some people are approaching a door.
+a woman is reaching into a drawer.
+a man is buttoning up his lab coat.
+the sail of a boat is being adjusted.
+a man is laying down a towel on the sand.
+a car is being towed up a hill.
+the men are fishing from a sailboat.
+the woman's assembling some shelving units.
+the woman's arms are outstretched.
+the woman's folding up a stepladder.
+the woman's walking through a storage area.
+some pedestrians are shaded by an umbrella.
+a mail carrier is emptying a mailbox.
+a courtyard is filled with tourists.
+some people are paving a walkway with bricks.
+potted plants have been arranged on multiple levels.
+farmers are picking vegetables in a field.
+a stool has fallen over on the ground.
+a woman is passing a crate over a railing.
+containers are stacked in a warehouse.
+a row of lampposts lines the street.
+decorations are being removed from the balconies.
+flags are displayed along the exterior of a building.
+they're sitting outdoors.
+they're watering a garden.
+they're cutting the grass.
+they're moving some furniture.
+the man's holding an open folder.
+the woman's writing notes in a binder.
+the woman's adding paper to the printer.
+the man's taking off his hat.
+they're driving along the shoreline.
+they're standing near a railing.
+they're handing out menus.
+they're dining at a restaurant.
+a meeting room is full of employees.
+some flowers have been left on the table.
+some chairs have been folded up.
+a large plant is in the corner of the room.
+metal bins are being emptied.
+a vehicle is being cleaned.
+a man is directing traffic.
+a worker is sweeping the roadway.
+researchers have entered a library.
+laboratory coats are hanging in a cabinet.
+technicians are gathered around a screen.
+scientific equipment has been set on a counter.
+he has stepped onto a balcony.
+he has climbed partway up a ladder.
+he's securing a lantern to a pole.
+he's passing under an archway.
+drinking glasses have been placed on a rack.
+boxes are being stacked on top of each other.
+bottles have been arranged on shelves.
+containers are being filled from a machine.
+they're on opposite sides of a transparent partition.
+they're inspecting a hole in the window pane.
+the woman's taping a poster to the wall.
+the man's showing the woman a laptop computer.
+pedestrians are strolling beside a riverbank.
+vendors are putting away their displays.
+a domed building overlooks an open-air market.
+a statue is shaded by some umbrellas.
+he is operating a computer.
+he is inspecting an item for sale.
+he is looking through some files.
+he is dressed formally.
+he is mopping the floor.
+he is lifting a suitcase.
+he is bending over the bag.
+he is unpacking a trunk.
+a microphone has been set up on a stage.
+some equipment has been arranged in a studio.
+a man is turning up the volume.
+a seat is being adjusted.
+some papers are scattered under the table.
+the file folders are being placed on the desk.
+most of the bookcases are empty.
+the area is stocked with many office supplies.
+waves are crashing on the shore.
+some people are swimming in the ocean.
+a boat is moving through the water.
+the rocks rise above the water.
+the suspension bridge has been built over the water.
+a bridge spans the stream.
+railing is being installed along the bridge.
+people are walking toward an archway.
+a man is addressing the audience.
+all of the seats are occupied.
+a man is delivering a speech outdoors.
+the microphone is being adjusted.
+they are participating in a competition.
+they are moving down the slope.
+they are climbing a mountain.
+they are wearing backpacks.
+a floor is being illuminated by an electriclight.
+the cables are hanging from the ceiling.
+light is streaming in through the window.
+the room is being cleaned.
+a woman is pouring water into a cup.
+some branches have fallen onto the grass.
+a tent is being erected.
+liquid is being poured into a container.
+he is holding a bottle.
+he is putting on a wool hat.
+he is looking at the sign.
+he is eating something.
+he is fishing at the shore.
+he is holding a fishing rod.
+he is getting on the boat.
+he is reeling the fish in.
+a plane is touching down on a runway.
+some service vehicles are gathered near the airplane.
+some passengers are disembarking from the aircraft.
+the airstrip is being cleared by the service crew.
+a man is standing at the front of the room.
+most of the people are seated at the meeting.
+some people are concentrating on taking notes.
+the tables are being set up in a meeting room.
+a man is being served.
+a man is wearing a safety helmet.
+a bike is leaning against the table.
+a table is covered with a cloth.
+a woman is holding a leash.
+a woman is feeding the dogs.
+a woman is petting the animals.
+a woman is walking the dogs on the beach.
+they are putting on their glasses.
+one of the men is wearing a long sleeved shirt.
+they are having a conversation.
+one of the men is sipping from a bottle.
+the man is measuring his height with a ruler.
+the man's back is turned to the window.
+the woman is assisting the man.
+the woman is trying on some clothing.
+all of the seats are unoccupied.
+candlesticks are set on the table.
+some dishes are being served.
+chandeliers are being polished.
+there are piles of books on the floor.
+some potted plants are on the ledge.
+plants have been set out on the balcony.
+some pots are beside the entrance.
+some boats are floating on the lake.
+the sail on the boat is being raised.
+the ship is docked at a port.
+one of the buildings is taller than the others.
+she is eating under the parasol.
+she is holding a utensil.
+she is ordering a pizza.
+she is sitting with her legs crossed.
+she is posing for a picture.
+she is holding a camera.
+she is developing a photo.
+she is admiring the waterfall.
+the desk is crowded with many different items.
+many books are being arranged in a bookcase.
+some papers are spread on the couch.
+the table is being cleaned up.
+the people are boarding the train.
+the passengers have arrived at the station.
+there is a train on one side of the track.
+a training session is in progress.
+they are carrying a canoe.
+they are paddling a boat.
+they are walking along the coast.
+they are putting on life vests.
+a man is writing a letter.
+a ladder is propped up against the tree.
+a man is standing on a ladder.
+a ladder is being carried up to the roof.
+one man is handing a business card to the other.
+one of the men is folding his arms.
+some people are wearing name tags.
+a man is looking at the blueprint.
+people are seated in a circle.
+a man is speaking to the audience.
+people are applauding the speaker.
+a man is pointing to a document.
+there are several pots on the stove.
+the sink is full of dirty dishes.
+the oven is being used.
+there are saucers on the cupboard.
+he is typing on a keyboard.
+he is staring at the monitor.
+he is turning on the computer.
+he is plugging in a laptop.
+a woman is filling the bowl with water.
+a woman is pouring something into the pan.
+a woman is stirring vegetables while cooking.
+a woman is watering some potted plants.
+a man is pointing into the distance.
+they are wearing hats.
+they are having a meeting in an office.
+a man is standing beside the woman.
+a woman is leaning against the door.
+some railing is being set up.
+there is some shrubbery near the balcony.
+the blinds are being drawn over the windows.
+a boat is on the water.
+the houses overlook the water.
+the water is flowing over the rocks.
+some boats are being rowed.
+the statue is mounted on a pedestal.
+some people are riding horses.
+the bricks are being laid.
+the lamppost is being taken down.
+he is riding the waves.
+he is opening a book.
+he is writing with a pen.
+he is holding a bottle.
+some people are exchanging business cards.
+a woman is taking notes.
+some people are reviewing papers.
+the men are standing across from each other.
+one man is writing on the board.
+people are listening to a speaker.
+some people are using their laptops.
+all of the people are seated.
+some chairs are piled on the table.
+the centerpiece is floral.
+chairs have been arranged under the lights.
+there is a round table between the chairs.
+people are standing on the platform.
+the platform is deserted.
+some passengers are hurrying to catch the train.
+a train is approaching the station.
+shrubs are growing along the trail.
+the path leads to the mountain.
+people are enjoying an outdoor activity.
+the bicycles are being ridden along the shore.
+he is relaxing outdoors.
+he is resting his chin on his hand.
+he is putting on a wristwatch.
+he is lying on the grass.
+the television has been dismantled.
+some potted plants are on the table.
+the blinds are drawn.
+the floor is being mopped.
+one of the men is gesturing as he talks.
+an interview is taking place.
+they are attending a banquet.
+one side of the table is unoccupied.
+a man is trying on a pair of shoes.
+a variety of shoes are on display.
+some shoes are being polished.
+some shoes are being moved onto the shelf.
+some people are fishing in a boat.
+some people are watching fish.
+some people are swimming in the river.
+some people are standing in shallow water.
+a man is packing a shipping carton outdoors.
+the shelves are filled with books.
+a man has a book open on his lap.
+there is a box under the table.
+umbrellas are being opened.
+many stools have been placed on the beach.
+a couple of parasols are open.
+there are some plates on the table.
+he is walking away from the lake.
+he is placing a bag on the ground.
+he is standing alone by the water.
+he is barefoot at the water's edge.
+a woman is holding a baby.
+a woman is pushing a cart.
+a woman is guiding a stroller.
+a woman is riding in a carriage.
+two people are shaking hands.
+a screen is being adjusted.
+documents have been heaped on the chair.
+one of the men is handing out some papers.
+she is parking a bicycle.
+she is wearing protective gear.
+she is riding a bicycle through the forest.
+she is paddling a boat.
+some pedestrians are crossing the road.
+a woman is working at a building site.
+some vehicles are parked near the building.
+a balcony is attached to every apartment.
+food is being put into the oven.
+a table is being set up.
+plates are stacked in the cupboard.
+there is an assortment of food on the table.
+the entire floor is covered with the carpet.
+they are weaving the rug together.
+one of the men is rolling up his sleeve.
+some people are admiring the artwork in the gallery.
+vehicles have stopped at the crosswalk.
+the road is being paved.
+cars are moving in both directions.
+traffic lights are out of order.
+the man is taking some measurements.
+the woman is wiping the window glass.
+the woman's image is reflected in the mirror.
+the man is looking at his reflection.
+a woman is seated on the grass.
+a woman is kneeling down on the ground.
+a woman is taking a picture of the landscape.
+a woman is looking at the mirror.
+he is doing the dishes.
+he is preparing some food.
+he is slicing a pizza.
+he is putting food on the tray.
+the table has been neatly set.
+the plates of food are being served.
+the candles on the table are being lit.
+the food has been placed on the plates.
+they are unfolding a map.
+they are drawing a plan.
+they are placing a document on the hood.
+they are examining a map together.
+some people are waiting on the platform.
+some people are boarding the train.
+the train conductor is collecting tickets.
+the train is pulling into the station.
+a car door has been left open.
+a vehicle is entering the garage.
+a bike is mounted on the roof of the car.
+a van is being pulled over to the curb.
+people are waiting for their friends.
+people are greeting each other.
+clothes are hung up against the wall.
+the signs are being posted on the windows.
+most of the people are looking in the same direction.
+one of the men is using a computer on his lap.
+people are looking at some documents.
+the laptop computers are being installed.
+the landscape in this area is dry and rocky.
+the path goes through the woods. 
+the man is walking up the steps. 
+the trail curves into the distance.
+a phone is off the hook.
+a calendar has been put on the shelf.
+a computer has been turned on.
+a keyboard is being placed on the table.
+some trees are reflected in the water.
+the trees have lost their leaves.
+there are no clouds in the sky.
+some people are fishing at the lakeshore.
+paint is being applied to the wall.
+one of the men is using a shovel.
+scaffolding has been set up.
+a ladder is propped up against the house.
+a woman is pulling over the car.
+a woman is looking in a mirror.
+a woman is exceeding the speed limit.
+a woman is holding a steering wheel.
+some people are waiting in line to check in.
+some people have stopped in front of the shop.
+some people are browsing for bargains.
+some people are paying by credit card.
+some people are strolling along the path.
+trees line both sides of the street.
+some people are walking along the hallway.
+the path curves along the fence.
+he is using a power tool.
+he is gathering up the rope.
+he is lighting a candle with a match.
+he is cooking some food on a grill.
+the building overlooks the pool.
+the fence is positioned near the swimming pool.
+an addition to the building is being built.
+some people are lying on the chairs.
+a woman is playing in a band.
+a woman is performing indoors.
+a woman is playing an instrument on her own.
+a woman is entertaining customers.
+the restaurant is full of diners.
+candles are placed on all of the tables.
+several seats are unoccupied.
+a waiter is taking an order.
+the bed is being made.
+various items are spread out on the table.
+there is a lamp on either side of the bed.
+a canopy is placed above the bed.
+books are sorted into different boxes.
+one of the men is picking up a book from a rack.
+some boxes are piled up in a cart.
+people are standing in lines.
+vehicles are parked in a row.
+cars are moving into the parking lot.
+some pickup trucks have stopped at the traffic light.
+car engines are being inspected in the garage.
+bicycles are parked in a rack.
+the windows of the building are being closed.
+the building is being demolished.
+there are stairs at the entrance.
+the sprinkler is spraying water onto the grass.
+the water is splashing the people.
+the fountain is working.
+the lawn is being mowed.
+they are sitting together side by side.
+a man has his arms folded.
+a woman is tearing off a piece of paper.
+they are facing each other.
+empty cartons are placed on the ground.
+the shelves are being rearranged.
+some boxes have been stacked up on top of each other.
+some chairs are being unloaded.
+the seat is occupied.
+the book is placed right next to the chair.
+the deck is being cleaned.
+the flowers are in bloom around the building.
+one of the men is welding a pipe.
+the houses are under renovation.
+the men are working on the wires.
+some people are walking around the construction site.
+the man is sitting behind the wheel.
+the doors have been left open.
+the woman is getting into a car.
+the car is being parked in the driveway.
+he is gazing at the screen.
+he is sitting at the counter.
+he is examining some papers.
+he is speaking into a microphone.
+some ships are sailing along the shore.
+some boats have been pulled up on a beach.
+the water is calm.
+the man is putting up a sail.
+she is reaching for something on a rack.
+she is watering some plants.
+she is leaning forward over the counter.
+she has a helmet under her arm.
+a woman is walking down the stairs.
+the street is covered with leaves.
+the lampposts are standing in a row.
+some people are leaning against the railing.
+the chairs are facing each other.
+there are chairs around the round table.
+the curtains are being drawn.
+the floor is being repainted.
+they are playing some string instruments.
+they are playing some music together.
+they are performing on stage together.
+they are putting away their musical instruments.
+he is cutting a piece of wood.
+he is working on a wall.
+he is digging a ditch.
+he is doing some construction work.
+the bookshelves are being relocated.
+wine is being poured into the glass.
+a painting is hanging on the wall.
+a man is playing the piano.
+the building is being renovated.
+a woman is leaning against a tree.
+some vehicles are casting shadows on the ground.
+the parking lot is currently full.
+a man is feeding a cat.
+a man is holding a plate.
+a man is eating at a cafeteria.
+a man is sitting in a rocking chair.
+plants are growing around the ruins.
+the ground is partially shaded.
+the crops are being planted in rows.
+the field is being harvested.
+they are gathered around the table.
+one of the men is turning the pages.
+there are many binders on the table.
+they are staring at the screen.
+they are walking into the laboratory.
+they have their lab coats on.
+one man is looking through the telescope.
+microscopes are being removed from a table.
+the clock face is round.
+some people are walking side by side.
+there are several cars at the intersection.
+a man is leaning against the railing.
+flowers are growing in a garden.
+pots are full of food.
+flower arrangements are on display.
+a woman is buying some flowers.
+cars are going in both directions.
+cars are parked under the bridge.
+some people are waiting at the crosswalk.
+the man is wandering around the road.
+some people are baking bread.
+baked goods are displayed in a showcase.
+many customers are shopping for bread.
+some desserts are being eaten.
+a woman is watching tv.
+some lights are being turned on.
+most of the seats are unoccupied.
+the wall is covered with patterned wallpaper.
+a man is leaning on the railing.
+the pictures are being hung.
+some wires are hanging from a bar.
+pictures are hung from a wall.
+they're walking down the hallway.
+the floor is being tiled.
+some lights are being turning on.
+a row of lights is hanging from the ceiling.
+some people are standing by a door.
+some people are seated on the stairs.
+some people are crossing the street.
+some people are eating their lunches.
+a man is putting his suitcase onto the carousel.
+some people are standing next to their luggage.
+people are waiting to board the plane.
+everyone is looking at the monitor.
+cups have been placed on the table.
+they're reading a book.
+the table is being arranged.
+a woman is studying for an exam.
+some of the tourists are leaning over the railing.
+they're taking a picture of an outdoor scene.
+people are standing on the suspension bridge.
+people are resting in the shade.
+flowers are being placed near the path.
+some people are walking down the path.
+a path is surrounded by shrubs.
+flowers are growing along the pathway.
+a woman is sitting near the low wall.
+there is a boat on the water.
+some people are standing on the deck.
+some people are strolling along the river.
+a woman is walking while talking on the phone.
+some notices are being posted on the bulletin board.
+a crowd has gathered in the plaza.
+they are wearing backpacks.
+people are eating food at the restaurant.
+people are lining up at the counter.
+people are waiting to get a drink.
+people are paying for their meals.
+they're concentrating on work together.
+they're helping each other move a desk.
+they're handling documents.
+they're arranging some books on the shelves.
+he's choosing an appliance.
+he's cleaning some equipment.
+he's pulling a suitcase.
+he's facing a machine.
+a man is boarding a boat.
+a tree has fallen into the ocean.
+the statue overlooks the water.
+people are walking in the woods.
+people are shopping in the department store.
+the buildings look the same.
+a man is entering the store.
+there are clouds in the sky.
+they are eating sandwiches at a table.
+a waiter is taking an order.
+there are chairs around the tables.
+tables are being cleaned by waiters.
+an alleyway is being paved with bricks.
+there are no cars on the road.
+there are blooming plants by the road.
+there's a man with a broom on the driveway.
+a woman is waiting for her friend.
+a woman is arranging some flowers.
+a woman is relaxing on the sofa.
+one of the seats is available.
+a group of people are strolling in the park.
+the buildings overlook the park.
+a statue is positioned on a pedestal.
+bicycles are secured to the post.
+he's dragging a bag.
+he's filling a bag with some food.
+he's crossing the road.
+he's building a cement wall.
+a woman is taking a picture.
+a woman is gazing at a painting.
+a woman is entering an art gallery.
+a woman is watching an artist at work.
+boats are docked in a harbor.
+swimmers are floating in a river.
+hikers are climbing up a hill.
+people are disembarking from a ferry.
+the desk is full of books.
+balloons have been put on the wall.
+items are sitting on the desk.
+pens are lying on top of the chair.
+the sign is being posted on the pole.
+the tree is casting a shadow.
+cars are parked near the tree.
+trees are being planted.
+they're cooking some food.
+they're picking up some plates.
+they're studying a menu.
+they're enjoying a meal.
+the tires have been taken off the car.
+a car has been completely dismantled.
+the men are looking for their hammers.
+the men are inspecting the engine of the vehicle.
+some lights are being turned off.
+people are entering a electronics store.
+a shopping center is crowded with people.
+a clerk is putting clothes into a closet.
+there is heavy traffic on the road.
+the street is deserted.
+pedestrians are standing near the curb.
+cars are parked at the intersection.
+the tables are set for a meal.
+people are ordering a meal.
+a woman is pouring water into a glass.
+a waiter is serving food.
+people are boarding a boat.
+people are staring out the window.
+people are reviewing some materials.
+people are watching a movie.
+she is stirring some food.
+she is preparing a meal.
+she is using a cash register.
+she is directing a customer to his seat.
+they're standing in a long line.
+they're purchasing train tickets.
+they're across from a busy street.
+they're near the edge of a platform.
+the musicians are turning away from their equipment.
+the musicians are bowing to the audience.
+the musicians are playing different instruments.
+there are lights hanging from the ceiling.
+some people are standing in the boat.
+the house is reflected on the water.
+there is a tree in the middle of the pond.
+people are racing their boats.
+there are customers in a store.
+some containers are organized in a row.
+some food is being eaten.
+the ladders are being used.
+the man is running on the lawn.
+a man is walking his dog on the grass.
+rocks are placed at the edge of the park.
+a man is holding a leash.
+a sign is hanging on the post.
+a woman is holding the strap of a bag.
+they are walking down the street.
+a woman is working outside.
+the fountain is springing water into the air.
+people are swimming in the pool.
+water is flowing down the stream.
+people are drinking water from the fountain.
+they're examining kitchenware items.
+they're holding shopping bags.
+they're organizing some shelves.
+they're standing near the door.
+the people are eating the donuts.
+the deserts are on display.
+the price tags are clearly visible.
+some sweets are being sliced.
+they're eating some food.
+they're cleaning pans with napkins.
+one of the men is cutting bread.
+stacks of plates are behind the men.
+the people are seated on the bus.
+some tickets are unavailable.
+some windows are being installed.
+some people are boarding the vehicle.
+they're helping some customers.
+they're opening boxes.
+they're shelving some books.
+they're in a two-floor structure.
+the path leads to the building.
+trees are being planted.
+the grass is being cut.
+the door has been closed.
+they are assembling bookshelves.
+they are reading.
+they are opening some books.
+they are listening to music.
+a man is going up the steps.
+a picture is hanging in the middle of the stairs.
+a plant is hanging on the railing.
+the staircase is being cleaned.
+water is flowing over a bridge.
+a bridge is suspended over a forest.
+a hiker is kneeling by some trees.
+a trail encircles a pond.
+a fence runs along the edge of the road.
+a gardener is trimming bushes in the park.
+some people are jogging in the park.
+people are lying down on the lawn.
+people are waiting to board the bus.
+some people are sitting on the railing.
+there is a lamppost beside the tram.
+a tram is pulled up near the curb.
+a man is adjusting his hat.
+some people are holding cups.
+a woman is arranging flower pots.
+they're shopping for groceries.
+smoke is rising into the air.
+industrial equipment is being assembled.
+construction materials are stored outside a building.
+some merchandise is being shipped.
+a man is hanging up some masks.
+products have been displayed.
+shelves are being stocked.
+a man is looking at merchandise.
+trees are planted on both sides of the street.
+several bicycles are parked next to a tree.
+cars are parked on one side of the road.
+people are walking along the road.
+dishes are being cleared from the table.
+a meal is being put into containers.
+a group has gathered in the restaurant for a meal.
+some people are cooking food outdoors.
+a woman is writing on the board.
+a woman is arranging the chairs.
+there is a gap between the chairs.
+a slide presentation is being made.
+the lamp has been placed by the chair.
+both the beds have been made.
+there's a picture above each bed.
+there is a lamp between the beds.
+they're planting vegetables.
+they're moving a truck.
+they're digging in the sand.
+they're watering plants.
+corn is growing in the garden.
+a purchase is being made.
+they're eating at a table.
+people are getting fruit from the box.
+they are facing the same direction.
+they are strolling on the sidewalk.
+they are seated on a bench.
+they are sitting under streetlights.
+they're drawing a map.
+the waste bins are being replaced.
+a document is being examined.
+they're both wearing hats.
+shelves are being stocked.
+fruit is being displayed for sale.
+containers are being filled with fruit.
+people are eating some food.
+she's typing a document.
+she's working at a desk.
+she's using a printer.
+she's holding a receiver.
+the boat is being towed away.
+some people are swimming.
+the boats are tied up at the dock.
+some people are taking a boat ride.
+the people are leaving the park.
+the railing is surrounded by grassy area.
+flowers are being arranged.
+some people are in a park.
+they're putting on uniforms.
+they're standing behind the counter.
+they're arranging items on the counter.
+they're walking in the lobby.
+a lamp is on each table.
+books have been left on a chair.
+the desks are being organized.
+documents are being handed out.
+the crates are empty.
+the vegetables are being weighed.
+the goods are on display.
+fruit is being put into plastic bags.
+a stack of paper has been set on a table.
+a copier is being repaired by a technician.
+he's holding a door open for a coworker.
+he's positioning a sheet of paper on the glass.
+a couple is rushing into the ocean.
+a couple is folding their arms.
+a couple is walking without shoes on.
+a couple is holding their shoes.
+the furniture is being moved.
+windows have been opened.
+a plant is next to the bench.
+the bench is occupied.
+an umbrella is being opened.
+people are eating hamburgers.
+a man is cooking on the grill.
+some people are going on a picnic.
+she's turning toward the window.
+she's facing a screen.
+she's delivering the computer.
+she's lifting a keyboard.
+a playing field is illuminated by lights.
+a group of people is sitting on the bench.
+a sculpture has been placed by the sign.
+all the chairs are empty.
+an apartment building is under construction.
+there is a parking space full of cars.
+a balcony is attached to each apartment.
+there is a park in front of the building.
+an airplane is taxiing down the runway.
+planes have landed on the ground.
+passengers are exiting an aircraft.
+the airplane doors are being shut.
+tracks are being repaired.
+passengers are standing on a platform.
+a train has pulled into the station.
+some people are walking down the ramp.
+there's a bridge over the water.
+there's a river through the cliff walls.
+there are people hiking up the mountain.
+there is a boat crossing the water.
+some jackets are being placed in a paper bag.
+some jackets are hanging from a hook in a store.
+the woman is hanging up jackets in a closet.
+the woman is paying the cashier for some jackets.
+children are riding a merry-go-round.
+children are at an amusement park.
+children are writing a note.
+children are smiling at each other.
+some people are sitting around the fountain.
+a swimmer is rushing into the water.
+workers are cleaning a pond.
+a gardener is watering plants.
+he's getting out of a car.
+he's riding in a taxi.
+he's walking outdoors.
+he's leaning against a brick wall.
+cartons are stacked in a shopping cart.
+containers are being labeled.
+people are inspecting an item.
+display cases have been emptied.
+a woman is playing piano.
+one of the doors has opened.
+a woman is lighting candles.
+an instrument has been situated in a room.
+he's working with some wood.
+he's walking in the forest.
+he's holding a toolbox.
+he's measuring some wood.
+a worker is greeting customers.
+stacks of baskets have been placed by the woman.
+a woman has the strap of a bag in her hand.
+people are putting fruit into the baskets.
+a worker is greeting customers.
+stacks of baskets have been placed by the woman.
+a woman has the strap of a bag in her hand.
+people are putting fruit into the baskets.
+they're reviewing some books.
+a woman is opening the door behind her.
+they're preparing for a presentation.
+the group is focusing on the monitor.
+she's shelving some books.
+she's putting some luggage into her car.
+she's wheeling her cart in the store.
+she's filling her basket with supplies.
+some people are standing on the grass.
+some people are seated on a wall.
+some people are lying down on the lawn.
+some people are strolling along the beach.
+she's opening a blind.
+she's carrying some luggage.
+she's standing in a waiting area.
+she's talking on the telephone.
+a worker is painting lines on the street.
+some people are waiting for the bus.
+a pedestrian is crossing the street.
+an officer is directing traffic.
+the suitcase is full of clothes.
+the suitcase is on the chair.
+the woman is in front of the airport.
+the woman is putting a doll in a drawer.
+flags are flying from the top of the deck.
+boats are floating on the water.
+a man is boarding the ship.
+some people are leaning on the railing.
+people are walking side by side.
+the railing runs above the top of the wall.
+people are passing under the bridge.
+a flag is hanging in an archway.
+a car is parked in the street.
+diners are seated outdoors.
+flags are hanging on the top of the building.
+people are leaving the building.
+some people are hanging a picture on the wall.
+some people are gazing at a bulletin board.
+some people are taking a painting out of the frame.
+some people are folding a piece of paper.
+a man is walking by the bicycle.
+people are choosing food from the showcase.
+a parking space is full of cars.
+a graphic design decorates the building roof.
+he is looking at a newspaper.
+he is reading a letter.
+he is reviewing some documents indoors.
+he is arranging some tables.
+the hood of the car is open.
+the man is putting a label on the carton.
+the door of the van has been left open.
+the man is driving the vehicle.
+they are climbing the ladder.
+they are fixing a tire.
+they are working on the street.
+they are doing some construction work.
+there is a picture on the wall above the sofa.
+a potted plant has been left on the floor.
+some tropical fruits are being placed on the plate.
+the table near the sofa is being moved away.
+she is crossing the train tracks.
+she is boarding the train.
+she is entering the station.
+she is standing by the bench.
+he is opening a door.
+he has some boxes in his hands.
+he is stacking boxes in the warehouse.
+he is taking some fruits out of the box.
+the blinds are being closed.
+there are four chairs around the table.
+a hat has been put on the table.
+a globe has been placed next to the vase.
+they are lying on the beach.
+they are taking off their glasses.
+they are sitting with their arms crossed .
+they are disassembling the bench.
+they are sitting in front of computer monitors.
+they are clapping their hands.
+they are assembling the computers.
+they are operating heavy machinery.
+the bus is letting off some passengers.
+people are waving at the bus driver.
+a man is wearing a backpack.
+some people are waiting to board the train.
+the bus is letting off some passengers.
+people are waving at the bus driver.
+a man is wearing a backpack.
+some people are waiting to board the rain.
+a man is pushing a cart.
+a man is guiding a stroller.
+a man is walking a dog.
+a man is strolling along the lake.
+one of the men is driving a vehicle.
+they are looking at each other.
+they are wearing hats.
+one of the men is getting into the car.
+she is pointing to a guidebook.
+she is inserting coins into the machine.
+she is holding a book in her hand.
+she is taking an order.
+they are walking down the stairs.
+they are standing hand in hand.
+they are polishing the escalators.
+they are facing each other.
+the cart is in the aisle.
+the cart is full of various products.
+the cart is being pushed across the street.
+the cart is being wheeled toward the door.
+notices are being posted on the bulletin board.
+a pay phone is being used.
+the woman is hanging up the phone.
+some shrubs are being planted.
+the man is carrying a ladder.
+the man is writing a letter.
+the man is standing on a ladder.
+the man is painting the door.
+she is washing the dishes in the sink.
+she is stirring something in the pot.
+she is putting some bottles in the cupboard.
+she is cooking some food on a grill outside.
+all the people are wearing helmets.
+some people are walking along the train platform.
+the train is pulling out of the station.
+nobody is riding a bicycle.
+a portable staircase has been brought up to the door.
+an airplane is touching down on the airstrip.
+a plane is on the ground.
+a plane is taking off.
+he is clearing snow off the roof.
+he is shoveling snow off the street.
+he is digging a hole with a tool.
+he is fixing the roof.
+they are holding some documents.
+they are setting up the chairs.
+they are passing out some papers.
+they are flipping through the pages of the books.
+people are being guided to their room.
+the hotel lobby is packed with people.
+some guests are being helped in the lobby.
+some people are entering through the door.
+the grass is being mowed.
+the plants have been planted in rows.
+the crops are being harvested.
+the vegetables have been sold.
+people are applauding the speaker.
+a man is drawing on the board.
+one of the people is standing behind the podium.
+a microphone is being adjusted.
+the man is feeding a horse.
+the man is hosing down the path.
+they are going on a carriage ride.
+the children are having a ride on a horse.
+the shelves are being stocked with merchandise.
+the shelves are filled with various kinds of goods.
+the floor of the store is tiled.
+the plates are arranged by their sizes.
+the balcony overlooks the river.
+the seats are occupied.
+there are various buildings in the background.
+the chairs are being set up.
+workers are putting on boots.
+a man is using a shovel.
+the road is being repaved.
+they are raking some leaves.
+he is taking a picture of some artwork.
+he is looking out the window.
+he is admiring a painting in the gallery.
+he is framing a picture.
+a woman is walking across the street.
+a woman is carrying a backpack.
+a woman is holding an umbrella.
+a woman is folding up an umbrella.
+they are lifting up a table.
+they are working at the drafting table.
+they are taking a break on the lawn.
+they are gathered around the table.
+the surface of the road is being smoothed.
+some bags are loaded on the back of the bicycles.
+they are riding bikes on the road.
+they are walking side by side.
+some of the cars are being towed away.
+one of the cars is pulling into a garage.
+some vehicles are waiting at a traffic light.
+cars are parked along the street.
+a purchase is being made.
+the shopper is putting groceries in a plastic bag.
+the woman is paying the cashier for the clothes.
+there are some boxes under the counter.

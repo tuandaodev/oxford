@@ -17,3 +17,7 @@ body {
     border-left: 1px solid #e7e7e7;
   }
 }
+
+.multi-textarea {
+    margin-bottom: 10px;
+}
