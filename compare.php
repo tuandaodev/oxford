@@ -52,10 +52,30 @@
             
             file_put_contents($file_input, json_encode($text_data));
 
+            $text_list_data = '';
             if (isset($_POST['list_co_san'])) {
                 $text_list_data = $_POST['list_co_san'];
             }
-            file_put_contents($file_list_input, json_encode($text_list_data));
+            
+            if (isset($_FILES['importfile2']) && ($_FILES['importfile2']['error'] == 0)) {  
+                $file_input = $_FILES['importfile2']['tmp_name'];
+                
+                $file = fopen($file_input,"r");
+                $list_string = array();
+                while (!feof($file)) {
+                    $temp_data = fgetcsv($file);
+                    $list_string[] = $temp_data[1];
+                }
+                fclose($file);
+                
+                if (count($list_string) > 0) {
+                    $text_list_data .= implode(" \r\n", $list_string);
+                }
+            }
+            
+            if (!empty($text_list_data)) {
+                file_put_contents($file_list_input, json_encode($text_list_data));
+            }
             
         }
         
@@ -216,6 +236,7 @@ function utf8_str_word_count($string, $format = 0, $charlist = null)
                                             <label>Kết quả: </label>
                                             <a href='<?php echo $file_exported ?>' target='_blank'><b>Download</b></a><br/>
                                             <?php } ?>
+                                            <input type="file" name="importfile2" id="importfile2" style='margin-top: 10px; margin-bottom: 10px'/>
                                             <label>List có sẵn:</label>
                                             <textarea data-autoresize class="form-control" rows="10" name="list_co_san" style="resize:vertical;"><?php echo $text_list_data ?></textarea>
                                         </div>
