@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-<!--    <title>English Tool - Phân tích và so sánh các đoạn văn</title>-->
+    <title>English Tool - Phân tích và so sánh các đoạn văn</title>
   </head>
   <?php
   
@@ -180,7 +180,7 @@ function utf8_str_word_count($string, $format = 0, $charlist = null)
           <div class="row">
               <div class="col-lg-12">
                   <div class="panel panel-default">
-                        <!--<div class="panel-heading">Phân tích và so sánh các đoạn văn</div>-->
+                        <div class="panel-heading">Phân tích và so sánh các đoạn văn</div>
                         <div class="panel-body">
                             <form method="POST" enctype="multipart/form-data">
                             <div class="row">
