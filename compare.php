@@ -52,9 +52,9 @@
             
             file_put_contents($file_input, json_encode($text_data));
 
-            $text_list_data = '';
+            $text_list_data_raw = '';
             if (isset($_POST['list_co_san'])) {
-                $text_list_data = $_POST['list_co_san'];
+                $text_list_data_raw = $_POST['list_co_san'];
             }
             
             if (isset($_FILES['importfile2']) && ($_FILES['importfile2']['error'] == 0)) {  
@@ -69,14 +69,18 @@
                 fclose($file);
                 
                 if (count($list_string) > 0) {
-                    $text_list_data .= implode(" \r\n", $list_string);
+                    $text_list_data_raw .= implode(" ", $list_string);
                 }
             }
             
-            if (!empty($text_list_data)) {
+            $text_list_data = array();
+            if (!empty($text_list_data_raw)) {
+                $text_list_data_raw = strtolower($text_list_data_raw);
+                // new function
+                $text_list_data_raw = utf8_str_word_count($text_list_data_raw, 1);
+                $text_list_data = array_unique($text_list_data_raw);
                 file_put_contents($file_list_input, json_encode($text_list_data));
             }
-            
         }
         
         if (isset($_POST['type_reset']) && $_POST['type_reset'] == 'reset') {
@@ -85,8 +89,6 @@
             if (file_exists($file_exported)) unlink($file_exported);
         }
         
-        
-        
     } else {
         if (file_exists($file_input)) {
             $text_data = file_get_contents($file_input);
@@ -94,15 +96,22 @@
         }
         if (file_exists($file_list_input)) {
             $text_list_data = file_get_contents($file_list_input);
+            $text_list_data = json_decode($text_list_data);
         }
     }
     
-    $all_list_words = array();
-    if ($text_list_data) {
-        $text_list_data_temp = strtolower($text_list_data);
-        // new function
-        $all_list_words = utf8_str_word_count($text_list_data_temp, 1);
-        $all_list_words = array_unique($all_list_words);
+    $all_list_words = $text_list_data;
+    $text_list_data_view = '';
+    if (!empty($text_list_data)) {
+        $text_list_data_view = implode("\n", $text_list_data);
+        // Data de lam hightlight
+        $temp_data = array();
+        foreach ($text_list_data as $a) {
+            if (strlen($a) < 2) continue;
+            $temp_data[] = str_replace("'", "\'", $a);
+        }
+        $text_list_data_hightlight = implode('","', $temp_data);
+        $text_list_data_hightlight = '"' . $text_list_data_hightlight . '"';
     }
     
     $final_result = array();
@@ -238,7 +247,7 @@ function utf8_str_word_count($string, $format = 0, $charlist = null)
                                             <?php } ?>
                                             <input type="file" name="importfile2" id="importfile2" style='margin-top: 10px; margin-bottom: 10px'/>
                                             <label>List có sẵn:</label>
-                                            <textarea data-autoresize class="form-control" rows="10" name="list_co_san" style="resize:vertical;"><?php echo $text_list_data ?></textarea>
+                                            <textarea data-autoresize class="form-control" rows="10" name="list_co_san" style="resize:vertical;"><?php echo $text_list_data_view ?></textarea>
                                         </div>
                                     </div>
                             </div>
@@ -267,10 +276,14 @@ function utf8_str_word_count($string, $format = 0, $charlist = null)
 
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/jquery.highlighttextarea.min.css">
     <link rel="stylesheet" href="css/custom.css">
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="js/jquery.highlighttextarea.min.js"></script>
     <script>
         function do_autoresize() {
             jQuery.each(jQuery('textarea[data-autoresize]'), function() {
@@ -285,6 +298,11 @@ function utf8_str_word_count($string, $format = 0, $charlist = null)
         $(document).ready(function () {
             do_autoresize();
             $('#doan_van').keyup();
+            
+            $('#textarea-container textarea').highlightTextarea({
+                words: [<?php echo $text_list_data_hightlight ?>]
+            });
+            
         });
         var count_tx = <?php echo $count_textarea ?>;
         function add_textarea() {
