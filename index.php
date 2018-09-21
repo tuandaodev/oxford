@@ -10,6 +10,7 @@
   
     $text_data = '';
     $file_saved = 'input/saved_input.txt';
+    $file_result = 'input/saved_result.txt';
     $file_exported = 'export/exported.csv';
     $need_export = false;
     $have_exported_file = false;
@@ -24,43 +25,53 @@
                 
                 $text_data = $string;
             }
-        }
-        
-        if (isset($_POST['type_reset']) && $_POST['type_reset'] == 'reset') {
-            if (file_exists($file_saved)) unlink($file_saved);
-            if (file_exists($file_exported)) unlink($file_exported);
-        }
-        
-    } else {
-        if (file_exists($file_saved)) {
-            $text_data = file_get_contents($file_saved);
-            if (file_exists($file_exported)) {
-                $have_exported_file = true;
-            }
-        }
-    }
-    
-    if ($text_data) {
-        $text_data = strtolower($text_data);
-//        $all_words = str_word_count($text_data, 1);
-        // new function
-        $all_words = utf8_str_word_count($text_data, 1);
-        
-        $result = array_count_values($all_words);
-        arsort($result);
-        
-        if ($need_export && count($result) > 0) {
-            $fp = fopen($file_exported, 'w');
             
+            $all_words = utf8_str_word_count($text_data, 1);
+            $result = array_count_values($all_words);
+            
+            $final_result = array();
+            if (file_exists($file_result)) {
+                $old_result = file_get_contents($file_result);
+                $old_result = json_decode($old_result, true);
+                
+                foreach (array_keys($old_result + $result) as $key) {
+                    $final_result[$key] = (isset($old_result[$key]) ? $old_result[$key] : 0) + (isset($result[$key]) ? $result[$key] : 0);
+                }
+            } else {
+                $final_result = $result;
+            }
+            
+            arsort($final_result);
+            file_put_contents($file_result, json_encode($final_result));
+            
+            $fp = fopen($file_exported, 'w');
             $count = 0;
-            foreach ($result as $word => $time) {
+            foreach ($final_result as $word => $time) {
                 $count++;
                 $temp = array($count,$word,$time);
                 fputcsv($fp, $temp);
             }
             fclose($fp);
-            $have_exported_file = true;
         }
+        
+        if (isset($_POST['type_reset']) && $_POST['type_reset'] == 'reset') {
+            if (file_exists($file_saved)) unlink($file_saved);
+            if (file_exists($file_exported)) unlink($file_exported);
+            if (file_exists($file_result)) unlink($file_result);
+        }
+        
+    } else {
+        if (file_exists($file_saved)) {
+            $text_data = file_get_contents($file_saved);
+        }
+        if (file_exists($file_result)) {
+            $final_result = file_get_contents($file_result);
+            $final_result = json_decode($final_result, true);
+        }
+    }
+    
+    if (file_exists($file_exported)) {
+        $have_exported_file = true;
     }
     
 function utf8_str_word_count($string, $format = 0, $charlist = null)
@@ -123,9 +134,9 @@ function utf8_str_word_count($string, $format = 0, $charlist = null)
                                                             <th class='text-center'>Từ</th>
                                                             <th class='text-center' style="width: 20%">Số lần xuất hiện</th>
                                                             <?php
-                                                                if (isset($result) && count($result > 0)) {
+                                                                if (isset($final_result) && count($final_result > 0)) {
                                                                     $count = 0;
-                                                                    foreach ($result as $word => $time) {
+                                                                    foreach ($final_result as $word => $time) {
                                                                         $count++;
                                                                         echo "<tr>
                                                                                 <td class='text-center'>$count</td>
