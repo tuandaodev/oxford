@@ -9,6 +9,9 @@
   </head>
   <?php
   
+    ini_set('memory_limit', '2048M');
+    set_time_limit(1800);
+  
     require_once('PHPExcel/autoload.php');
     use PhpOffice\PhpSpreadsheet\Spreadsheet;
     use PhpOffice\PhpSpreadsheet\IOFactory;
@@ -156,12 +159,17 @@ if (!$count_textarea) {
     write_excel($file_exported, $final_result);
 }
 
+$hide_textarea = false;
+if ($count_textarea > 200) {
+    $hide_textarea = true;
+}
+
 if (file_exists($file_exported)) {
     $have_exported_file = true;
 }
 
 function highlight($text, $word) {
-    $highlighted = preg_filter("/\b($word)\b/i", '<span class="highlight_word">$0</span>', $text);
+    $highlighted = preg_filter("/\b($word)\b/i", '<b>$0</b>', $text);
     if (!empty($highlighted)) {
         $text = $highlighted;
     }
@@ -261,7 +269,9 @@ function utf8_str_word_count($string, $format = 0, $charlist = null)
                                             <div id="textarea<?php echo $html_count ?>" class="multi-textarea">
                                                 <label>Đoạn #<?php echo $html_count ?>: (Số từ matched: <?php echo $text_area['count'] ?>)</label>
                                                 <div class="doan-van"><?php echo $text_area['html'] ?></div>
+                                                <?php if (!$hide_textarea) { ?>
                                                 <textarea data-autoresize class="form-control" rows="5" name="doan_van[]" style="resize:vertical;"><?php echo $text_area['text'] ?></textarea>
+                                                <?php } ?>
                                             </div>
                                         <?php } } else { ?> 
                                             <div id="textarea1" class="multi-textarea">

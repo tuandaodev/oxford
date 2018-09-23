@@ -27,7 +27,6 @@ body {
     padding: 10px;
 }
 
-.highlight_word {
-    font-weight: bold;
+#page-wrapper b {
     color: red;
 }
