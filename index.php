@@ -23,11 +23,11 @@
             if ($_POST['doan_van']) {
                 $string = $_POST['doan_van'];
                 file_put_contents($file_saved, $string);
-                
                 $text_data = $string;
             }
             
-            $all_words = utf8_str_word_count($text_data, 1);
+            $temp_data = strtolower($text_data);
+            $all_words = utf8_str_word_count($temp_data, 1);
             $result = array_count_values($all_words);
             
             $final_result = array();
