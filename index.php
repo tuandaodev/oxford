@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tools</title>
+    <title>English - Tools</title>
   </head>
   <?php
   
@@ -93,14 +93,20 @@ function utf8_str_word_count($string, $format = 0, $charlist = null)
     
   ?>
   <body>
+      <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href=".">English - Tools</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href=".">Count Words</a></li>
+      <li><a href="compare.php">Compare</a></li>
+    </ul>
+  </div>
+</nav>
       <div id="page-wrapper">
           <div class="row">
-                <div class="col-lg-12">
-                    <h1 class="page-header">Tools</h1>
-                </div>
-            </div>
-          <div class="row">
-              <div class="col-lg-12">
+              <div class="col-lg-12" style="margin-top: 20px;">
                   <div class="panel panel-default">
                         <div class="panel-heading">Tools tách từ và đếm số lần lặp lại
                           </div>

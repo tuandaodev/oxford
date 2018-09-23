@@ -21,3 +21,13 @@ body {
 .multi-textarea {
     margin-bottom: 10px;
 }
+
+.doan-van {
+    white-space: pre-wrap;
+    padding: 10px;
+}
+
+.highlight_word {
+    font-weight: bold;
+    color: red;
+}

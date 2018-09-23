@@ -47,6 +47,9 @@
             if (isset($_FILES['importfile']) && ($_FILES['importfile']['error'] == 0)) {
                 $file_input = $_FILES['importfile']['tmp_name'];
                 $import_data = read_excel($file_input);
+                foreach ($import_data as $key => $temp_data) {
+                    $import_data[$key] = str_replace(array("\r", "\n"), '', $temp_data);
+                }
                 $text_data = array_merge($text_data, $import_data);
             }
             
@@ -102,6 +105,7 @@
     
     $all_list_words = $text_list_data;
     $text_list_data_view = '';
+    $text_list_data_hightlight = '';
     if (!empty($text_list_data)) {
         $text_list_data_view = implode("\n", $text_list_data);
         // Data de lam hightlight
@@ -128,6 +132,13 @@
             }
             $temp['text'] = $data;
             $temp['count'] = $count;
+            
+            $html_data = $data;
+            foreach ($all_list_words as $word) {
+                $html_data = highlight($html_data, $word);
+            }
+            
+            $temp['html'] = $html_data;
             $final_result[] = $temp;
         }
     }
@@ -144,6 +155,13 @@ if (file_exists($file_exported)) {
     $have_exported_file = true;
 }
 
+function highlight($text, $word) {
+    $highlighted = preg_filter("/\b($word)\b/i", '<span class="highlight_word">$0</span>', $text);
+    if (!empty($highlighted)) {
+        $text = $highlighted;
+    }
+    return $text;
+}
 function write_excel($file_exported, $list_data) {
     
     $spreadsheet = new Spreadsheet();
@@ -200,14 +218,20 @@ function utf8_str_word_count($string, $format = 0, $charlist = null)
     
   ?>
   <body>
+      <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href=".">English - Tools</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href=".">Count Words</a></li>
+      <li class="active"><a href="compare.php">Compare</a></li>
+    </ul>
+  </div>
+</nav>
       <div id="page-wrapper">
           <div class="row">
-                <div class="col-lg-12">
-                    <h1 class="page-header">Tools</h1>
-                </div>
-            </div>
-          <div class="row">
-              <div class="col-lg-12">
+              <div class="col-lg-12" style="margin-top: 20px;">
                   <div class="panel panel-default">
                         <div class="panel-heading">Phân tích và so sánh các đoạn văn</div>
                         <div class="panel-body">
@@ -223,12 +247,13 @@ function utf8_str_word_count($string, $format = 0, $charlist = null)
                                         
                                         if (count($final_result) > 0) {
                                         $html_count = 0;
-                                        foreach ($final_result as $text_area) { 
+                                        foreach ($final_result as $text_area) {
                                             
                                             $html_count++;
                                             ?>
                                             <div id="textarea<?php echo $html_count ?>" class="multi-textarea">
-                                                <label>Đoạn #<?php echo $html_count ?>:</label>
+                                                <label>Đoạn #<?php echo $html_count ?>: (Số từ matched: <?php echo $text_area['count'] ?>)</label>
+                                                <div class="doan-van"><?php echo $text_area['html'] ?></div>
                                                 <textarea data-autoresize class="form-control" rows="5" name="doan_van[]" style="resize:vertical;"><?php echo $text_area['text'] ?></textarea>
                                             </div>
                                         <?php } } else { ?> 
@@ -297,12 +322,6 @@ function utf8_str_word_count($string, $format = 0, $charlist = null)
         }
         $(document).ready(function () {
             do_autoresize();
-            $('#doan_van').keyup();
-            
-            $('#textarea-container textarea').highlightTextarea({
-                words: [<?php echo $text_list_data_hightlight ?>]
-            });
-            
         });
         var count_tx = <?php echo $count_textarea ?>;
         function add_textarea() {
