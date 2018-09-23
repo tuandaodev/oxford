@@ -64,13 +64,17 @@
             if (isset($_FILES['importfile2']) && ($_FILES['importfile2']['error'] == 0)) {  
                 $file_input = $_FILES['importfile2']['tmp_name'];
                 
-                $file = fopen($file_input,"r");
                 $list_string = array();
-                while (!feof($file)) {
-                    $temp_data = fgetcsv($file);
-                    $list_string[] = $temp_data[1];
+                if (strpos($_FILES['importfile2']['name'], '.csv') !== false) {
+                    $file = fopen($file_input,"r");
+                    while (!feof($file)) {
+                        $temp_data = fgetcsv($file);
+                        $list_string[] = $temp_data[1];
+                    }
+                    fclose($file);
+                } else {
+                    $list_string = read_excel($file_input);
                 }
-                fclose($file);
                 
                 if (count($list_string) > 0) {
                     $text_list_data_raw .= implode(" ", $list_string);
@@ -122,27 +126,27 @@
     $final_result = array();
     if ($text_data) {
         foreach ($text_data as $key => $data) {
-            $data = strtolower($data);
-            $all_words = utf8_str_word_count($data, 1);
-            $all_words = array_count_values($all_words);
-            $count = 0;
-            foreach ($all_words as $word => $time) {
-                if (count($all_list_words) > 0 && in_array($word, $all_list_words)) {
-                    $count = $count + $time;
+                $data = strtolower($data);
+                $all_words = utf8_str_word_count($data, 1);
+                $all_words = array_count_values($all_words);
+                $count = 0;
+                foreach ($all_words as $word => $time) {
+                    if (count($all_list_words) > 0 && in_array($word, $all_list_words)) {
+                        $count = $count + $time;
+                    }
                 }
+                $temp['text'] = $data;
+                $temp['count'] = $count;
+
+                $html_data = $data;
+                foreach ($all_list_words as $word) {
+                    $html_data = highlight($html_data, $word);
+                }
+
+                $temp['html'] = $html_data;
+                $final_result[] = $temp;
             }
-            $temp['text'] = $data;
-            $temp['count'] = $count;
-            
-            $html_data = $data;
-            foreach ($all_list_words as $word) {
-                $html_data = highlight($html_data, $word);
-            }
-            
-            $temp['html'] = $html_data;
-            $final_result[] = $temp;
         }
-    }
     
 $count_textarea = count($final_result);
 if (!$count_textarea) {
@@ -190,7 +194,9 @@ function read_excel($file_input) {
         $cellIterator->setIterateOnlyExistingCells(FALSE); // This loops through all cells,
         $cells = [];
         foreach ($cellIterator as $key => $cell) {
-            $import_data[] = $cell->getValue();
+            if ($cell->getValue()) {
+                $import_data[] = $cell->getValue();
+            }
         }
     }
     
