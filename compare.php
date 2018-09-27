@@ -135,7 +135,7 @@
                 $count = 0;
                 foreach ($all_words as $word => $time) {
                     if (count($all_list_words) > 0 && in_array($word, $all_list_words)) {
-                        $count = $count + $time;
+                        $count = $count + 1;
                     }
                 }
                 $temp['text'] = $data;
@@ -267,6 +267,7 @@ function utf8_str_word_count($string, $format = 0, $charlist = null)
                                             $html_count++;
                                             ?>
                                             <div id="textarea<?php echo $html_count ?>" class="multi-textarea">
+                                                <button type="button" class="btn btn-default btn-circle btn-xs"><i class="fa fa-check"></i></button>
                                                 <label>Đoạn #<?php echo $html_count ?>: (Số từ matched: <?php echo $text_area['count'] ?>)</label>
                                                 <div class="doan-van"><?php echo $text_area['html'] ?></div>
                                                 <?php if (!$hide_textarea) { ?>
@@ -320,6 +321,7 @@ function utf8_str_word_count($string, $format = 0, $charlist = null)
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
     <link rel="stylesheet" href="css/jquery.highlighttextarea.min.css">
+    <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/custom.css">
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
