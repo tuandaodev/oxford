@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="favicon.ico">
     <title>English Tool - Phân tích và so sánh các đoạn văn</title>
+    <link rel="stylesheet" href="css/custom.css">
   </head>
   <?php
   
@@ -145,8 +146,12 @@
                 foreach ($all_list_words as $word) {
                     $html_data = highlight($html_data, $word);
                 }
-
                 $temp['html'] = $html_data;
+                
+                $re = '/(?i)<b>.*?<\/b>/m';
+                $temp['clean'] = preg_replace($re, '', $html_data);
+                $temp['clean'] = str_replace("  ", " ", $temp['clean']);
+                
                 $final_result[] = $temp;
             }
         }
@@ -263,13 +268,14 @@ function utf8_str_word_count($string, $format = 0, $charlist = null)
                                         if (count($final_result) > 0) {
                                         $html_count = 0;
                                         foreach ($final_result as $text_area) {
-                                            
                                             $html_count++;
                                             ?>
                                             <div id="textarea<?php echo $html_count ?>" class="multi-textarea">
-                                                <button type="button" class="btn btn-default btn-circle btn-xs"><i class="fa fa-check"></i></button>
+                                                <button type="button" onclick="updateText(this)" status="1" class="btn btn-default btn-circle btn-xs"><i class="fa fa-check"></i></button>
                                                 <label>Đoạn #<?php echo $html_count ?>: (Số từ matched: <?php echo $text_area['count'] ?>)</label>
                                                 <div class="doan-van"><?php echo $text_area['html'] ?></div>
+                                                <div class="clean-script"><?php echo $text_area['clean'] ?></div>
+                                                <div class="orginal-script"><?php echo $text_area['text'] ?></div>
                                                 <?php if (!$hide_textarea) { ?>
                                                 <textarea data-autoresize class="form-control" rows="5" name="doan_van[]" style="resize:vertical;"><?php echo $text_area['text'] ?></textarea>
                                                 <?php } ?>
@@ -322,7 +328,6 @@ function utf8_str_word_count($string, $format = 0, $charlist = null)
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
     <link rel="stylesheet" href="css/jquery.highlighttextarea.min.css">
     <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/custom.css">
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
@@ -349,6 +354,25 @@ function utf8_str_word_count($string, $format = 0, $charlist = null)
             $('#textarea-container').append(html_code);
             
             do_autoresize();
+        }
+        function updateText(element) {
+            if ($(element).attr('status') === "1") {
+                $(element).html('<i class="fa fa-times"></i>');
+                $(element).attr('status', '0');
+                var cleanText = $(element).siblings('.clean-script').html();
+                console.log(cleanText);
+                $(element).siblings('textarea').html(cleanText);
+                $(element).siblings('.clean-script').show();
+                $(element).siblings('.doan-van').hide();
+            } else {
+                $(element).html('<i class="fa fa-check"></i>');
+                $(element).attr('status', '1');
+                var originalText = $(element).siblings('.orginal-script').html();
+                console.log(cleanText);
+                $(element).siblings('textarea').html(originalText);
+                $(element).siblings('.clean-script').hide();
+                $(element).siblings('.doan-van').show();
+            }
         }
     </script>
   </body>

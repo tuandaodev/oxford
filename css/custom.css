@@ -22,11 +22,20 @@ body {
     margin-bottom: 10px;
 }
 
-.doan-van {
+.clean-script, .doan-van {
     white-space: pre-wrap;
     padding: 10px;
 }
 
 #page-wrapper b {
     color: red;
+}
+.clean-script {
+    display: none;
+}
+.orginal-script {
+    display: none;
+}
+.html-script {
+    display: none;
 }
