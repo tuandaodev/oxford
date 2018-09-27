@@ -30,12 +30,7 @@ body {
 #page-wrapper b {
     color: red;
 }
-.clean-script {
-    display: none;
-}
-.orginal-script {
-    display: none;
-}
-.html-script {
+
+.script-words {
     display: none;
 }

@@ -134,13 +134,17 @@
                 $all_words = utf8_str_word_count($data, 1);
                 $all_words = array_count_values($all_words);
                 $count = 0;
+                
+                $temp_words = array();
                 foreach ($all_words as $word => $time) {
                     if (count($all_list_words) > 0 && in_array($word, $all_list_words)) {
                         $count = $count + 1;
+                        $temp_words[] = $word;
                     }
                 }
                 $temp['text'] = $data;
                 $temp['count'] = $count;
+                $temp['words'] = $temp_words;
 
                 $html_data = $data;
                 foreach ($all_list_words as $word) {
@@ -148,9 +152,9 @@
                 }
                 $temp['html'] = $html_data;
                 
-                $re = '/(?i)<b>.*?<\/b>/m';
-                $temp['clean'] = preg_replace($re, '', $html_data);
-                $temp['clean'] = str_replace("  ", " ", $temp['clean']);
+//                $re = '/(?i)<b>.*?<\/b>/m';
+//                $temp['clean'] = preg_replace($re, '', $html_data);
+//                $temp['clean'] = str_replace("  ", " ", $temp['clean']);
                 
                 $final_result[] = $temp;
             }
@@ -274,8 +278,7 @@ function utf8_str_word_count($string, $format = 0, $charlist = null)
                                                 <button type="button" onclick="updateText(this)" status="1" class="btn btn-default btn-circle btn-xs"><i class="fa fa-check"></i></button>
                                                 <label>Đoạn #<?php echo $html_count ?>: (Số từ matched: <?php echo $text_area['count'] ?>)</label>
                                                 <div class="doan-van"><?php echo $text_area['html'] ?></div>
-                                                <div class="clean-script"><?php echo $text_area['clean'] ?></div>
-                                                <div class="orginal-script"><?php echo $text_area['text'] ?></div>
+                                                <div class="script-words"><?php echo json_encode($text_area['words']) ?></div>
                                                 <?php if (!$hide_textarea) { ?>
                                                 <textarea data-autoresize class="form-control" rows="5" name="doan_van[]" style="resize:vertical;"><?php echo $text_area['text'] ?></textarea>
                                                 <?php } ?>
@@ -356,22 +359,32 @@ function utf8_str_word_count($string, $format = 0, $charlist = null)
             do_autoresize();
         }
         function updateText(element) {
+            var words_string = $(element).siblings('.script-words').html();
+            var words = JSON.parse(words_string);
+            console.log(words);
             if ($(element).attr('status') === "1") {
                 $(element).html('<i class="fa fa-times"></i>');
                 $(element).attr('status', '0');
-                var cleanText = $(element).siblings('.clean-script').html();
-                console.log(cleanText);
-                $(element).siblings('textarea').html(cleanText);
-                $(element).siblings('.clean-script').show();
-                $(element).siblings('.doan-van').hide();
+                var textInList = $('textarea[name="list_co_san"]').val();
+                console.log(textInList);
+                for (i=0; i< words.length; i++) {
+                    var regex = new RegExp('\\b(' + words[i] + ')\\b',"g");
+                    textInList = textInList.replace(regex, "");
+                }
+                textInList = textInList.replace(/^\s*[\r\n]/gm, '');
+                $('textarea[name="list_co_san"]').val(textInList);
+                $(element).siblings('textarea').attr('disabled', true);
             } else {
                 $(element).html('<i class="fa fa-check"></i>');
                 $(element).attr('status', '1');
-                var originalText = $(element).siblings('.orginal-script').html();
-                console.log(cleanText);
-                $(element).siblings('textarea').html(originalText);
-                $(element).siblings('.clean-script').hide();
-                $(element).siblings('.doan-van').show();
+                var textInList2 = $('textarea[name="list_co_san"]').val();
+                console.log(textInList2);
+                for (i=0; i< words.length; i++) {
+                    textInList2 = textInList2 + '\n' + words[i];
+                }
+                textInList2 = textInList2.replace(/^\s*[\r\n]/gm, '');
+                $('textarea[name="list_co_san"]').val(textInList2);
+                $(element).siblings('textarea').attr('disabled', false);
             }
         }
     </script>
