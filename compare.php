@@ -88,9 +88,17 @@
             $text_list_data = array();
             if (!empty($text_list_data_raw)) {
                 $text_list_data_raw = strtolower($text_list_data_raw);
+                $text_list_data_raw = str_replace("’", "'", $text_list_data_raw);
                 // new function
                 $text_list_data_raw = utf8_str_word_count($text_list_data_raw, 1);
                 $text_list_data = array_unique($text_list_data_raw);
+                
+                foreach ($text_list_data as $key => $temp_word) {
+                    if ($temp_word == "-" || $temp_word == "_") {
+                        unset($text_list_data[$key]);
+                    }
+                }
+                
                 file_put_contents($file_list_input, json_encode($text_list_data));
             }
         }
@@ -114,30 +122,46 @@
     
     $all_list_words = $text_list_data;
     $text_list_data_view = '';
-    $text_list_data_hightlight = '';
+//    $text_list_data_hightlight = '';
+    $count_list_co_san = 0;
     if (!empty($text_list_data)) {
+        $count_list_co_san = count($text_list_data);
+        
+        foreach ($text_list_data as $key => $temp_word) {
+            if ($temp_word == '-' || $temp_word == '_') {
+                unset($text_list_data[$key]);
+            }
+        }
         $text_list_data_view = implode("\n", $text_list_data);
         // Data de lam hightlight
-        $temp_data = array();
-        foreach ($text_list_data as $a) {
-            if (strlen($a) < 2) continue;
-            $temp_data[] = str_replace("'", "\'", $a);
-        }
-        $text_list_data_hightlight = implode('","', $temp_data);
-        $text_list_data_hightlight = '"' . $text_list_data_hightlight . '"';
+//        $temp_data = array();
+//        foreach ($text_list_data as $a) {
+//            if (strlen($a) < 2) continue;
+//            $temp_data[] = str_replace("'", "\'", $a);
+//        }
+//        $text_list_data_hightlight = implode('","', $temp_data);
+//        $text_list_data_hightlight = '"' . $text_list_data_hightlight . '"';
     }
     
     $final_result = array();
     if ($text_data) {
         foreach ($text_data as $key => $data) {
                 $data = strtolower($data);
+                $data = str_replace("’", "'", $data);
                 $all_words = utf8_str_word_count($data, 1);
                 $all_words = array_count_values($all_words);
                 $count = 0;
                 
                 $temp_words = array();
                 foreach ($all_words as $word => $time) {
-                    if (count($all_list_words) > 0 && in_array($word, $all_list_words)) {
+//                    if ($word == "i'd") {
+//                        if (in_array($word, $all_list_words)) {
+//                            echo "DUng roi";
+//                        } else {
+//                            echo "FUCK SAI";
+//                        }
+//                        exit;
+                    if (count($all_list_words) > 0 && in_array($word, $all_list_words)) {   
                         $count = $count + 1;
                         $temp_words[] = $word;
                     }
@@ -145,9 +169,16 @@
                 $temp['text'] = $data;
                 $temp['count'] = $count;
                 $temp['words'] = $temp_words;
-
+                
                 $html_data = $data;
-                foreach ($all_list_words as $word) {
+                
+                $TEMPall_list_words = $all_list_words;
+                
+                usort($TEMPall_list_words, function($a, $b) {
+                    return strlen($b) - strlen($a);
+                });
+                
+                foreach ($TEMPall_list_words as $word) {
                     $html_data = highlight($html_data, $word);
                 }
                 $temp['html'] = $html_data;
@@ -178,7 +209,10 @@ if (file_exists($file_exported)) {
 }
 
 function highlight($text, $word) {
-    $highlighted = preg_filter("/\b($word)\b/i", '<b>$0</b>', $text);
+    
+    $word = preg_quote($word, "/");
+    
+    $highlighted = preg_filter("/\b($word)\b(?!')/i", '<zz>$0</zz>', $text);
     if (!empty($highlighted)) {
         $text = $highlighted;
     }
@@ -298,8 +332,8 @@ function utf8_str_word_count($string, $format = 0, $charlist = null)
                                             <a href='<?php echo $file_exported ?>' target='_blank'><b>Download</b></a><br/>
                                             <?php } ?>
                                             <input type="file" name="importfile2" id="importfile2" style='margin-top: 10px; margin-bottom: 10px'/>
-                                            <label>List có sẵn:</label>
-                                            <textarea data-autoresize class="form-control" rows="10" name="list_co_san" style="resize:vertical;"><?php echo $text_list_data_view ?></textarea>
+                                            <label>List có sẵn: </label> <span id="count-list-co-san"><?php echo $count_list_co_san ?></span>
+                                            <textarea data-autoresize class="form-control" rows="10" id="list_co_san" name="list_co_san" style="resize:vertical;"><?php echo $text_list_data_view ?></textarea>
                                         </div>
                                     </div>
                             </div>
@@ -349,6 +383,8 @@ function utf8_str_word_count($string, $format = 0, $charlist = null)
         }
         $(document).ready(function () {
             do_autoresize();
+            
+            $('#list_co_san').keyup();
         });
         var count_tx = <?php echo $count_textarea ?>;
         function add_textarea() {
@@ -365,27 +401,40 @@ function utf8_str_word_count($string, $format = 0, $charlist = null)
             if ($(element).attr('status') === "1") {
                 $(element).html('<i class="fa fa-times"></i>');
                 $(element).attr('status', '0');
-                var textInList = $('textarea[name="list_co_san"]').val();
+                var textInList = $('#list_co_san').val();
                 console.log(textInList);
                 for (i=0; i< words.length; i++) {
-                    var regex = new RegExp('\\b(' + words[i] + ')\\b',"g");
+                    var regex = new RegExp('\\b(' + words[i] + ')\\b(?!\')',"g");
                     textInList = textInList.replace(regex, "");
                 }
                 textInList = textInList.replace(/^\s*[\r\n]/gm, '');
+                textInList = textInList.trim();
+                
                 $('textarea[name="list_co_san"]').val(textInList);
                 $(element).siblings('textarea').attr('disabled', true);
+                
+                var countWords = textInList.split("\n").length;
+                $("#count-list-co-san").html(countWords);
             } else {
                 $(element).html('<i class="fa fa-check"></i>');
                 $(element).attr('status', '1');
-                var textInList2 = $('textarea[name="list_co_san"]').val();
-                console.log(textInList2);
+                var textInList = $('#list_co_san').val();
+                console.log(textInList);
                 for (i=0; i< words.length; i++) {
-                    textInList2 = textInList2 + '\n' + words[i];
+                    textInList = textInList + '\n' + words[i];
+                    console.log(textInList);
                 }
-                textInList2 = textInList2.replace(/^\s*[\r\n]/gm, '');
-                $('textarea[name="list_co_san"]').val(textInList2);
+                textInList = textInList.replace(/^\s*[\r\n]/gm, '');
+                textInList = textInList.trim();
+                
+                $('#list_co_san').val(textInList);
                 $(element).siblings('textarea').attr('disabled', false);
+                
+                var countWords = textInList.split("\n").length;
+                $("#count-list-co-san").html(countWords);
             }
+            
+            $('#list_co_san').keyup();
         }
     </script>
   </body>

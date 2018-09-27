@@ -9,10 +9,16 @@
   </head>
   <?php
   
+    require_once('PHPExcel/autoload.php');
+    use PhpOffice\PhpSpreadsheet\Spreadsheet;
+    use PhpOffice\PhpSpreadsheet\IOFactory;
+    use PhpOffice\PhpSpreadsheet\Reader;
+    use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
+  
     $text_data = '';
     $file_saved = 'input/saved_input.txt';
     $file_result = 'input/saved_result.txt';
-    $file_exported = 'export/exported.csv';
+    $file_exported = 'export/exported.xlsx';
     $need_export = false;
     $have_exported_file = false;
     
@@ -26,9 +32,17 @@
                 $text_data = $string;
             }
             
+            $text_data = str_replace("’", "", $text_data);
             $temp_data = strtolower($text_data);
+            
             $all_words = utf8_str_word_count($temp_data, 1);
             $result = array_count_values($all_words);
+            
+            foreach ($result as $key => $temp_word) {
+                if ($key == '-' || $key == '_') {
+                    unset($result[$key]);
+                }
+            }
             
             $final_result = array();
             if (file_exists($file_result)) {
@@ -45,14 +59,16 @@
             arsort($final_result);
             file_put_contents($file_result, json_encode($final_result));
             
-            $fp = fopen($file_exported, 'w');
-            $count = 0;
-            foreach ($final_result as $word => $time) {
-                $count++;
-                $temp = array($count,$word,$time);
-                fputcsv($fp, $temp);
-            }
-            fclose($fp);
+            write_excel($file_exported, $final_result);
+            
+//            $fp = fopen($file_exported, 'w');
+//            $count = 0;
+//            foreach ($final_result as $word => $time) {
+//                $count++;
+//                $temp = array($count,$word,$time);
+//                fputcsv($fp, $temp);
+//            }
+//            fclose($fp);
         }
         
         if (isset($_POST['type_reset']) && $_POST['type_reset'] == 'reset') {
@@ -90,6 +106,25 @@ function utf8_str_word_count($string, $format = 0, $charlist = null)
         $result = count($result);
     }
     return $result;
+}
+
+function write_excel($file_exported, $list_data) {
+    
+    $spreadsheet = new Spreadsheet();
+    $sheet = $spreadsheet->getActiveSheet();
+    
+    if (count($list_data) == 0) return false;
+    $count = 0;
+    
+    foreach ($list_data as $word => $time) {
+        $count++;
+        $sheet->setCellValue('A' . $count, $count);
+        $sheet->setCellValue('B' . $count, $word);
+        $sheet->setCellValue('C' . $count, $time);
+    }
+    
+    $writer = new Xlsx($spreadsheet);
+    $writer->save($file_exported);
 }
     
   ?>
