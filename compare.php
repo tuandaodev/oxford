@@ -99,7 +99,11 @@
                     }
                 }
                 
-                file_put_contents($file_list_input, json_encode($text_list_data));
+                if (is_array($text_list_data) && !empty($text_list_data)) {
+                    file_put_contents($file_list_input, json_encode($text_list_data));
+                } else {
+                    file_put_contents($file_list_input, '');
+                }
             }
         }
         
@@ -132,7 +136,10 @@
                 unset($text_list_data[$key]);
             }
         }
-        $text_list_data_view = implode("\n", $text_list_data);
+        
+        if (is_array($text_list_data) && !empty($text_list_data)) {
+            $text_list_data_view = implode("\n", $text_list_data);
+        }
         // Data de lam hightlight
 //        $temp_data = array();
 //        foreach ($text_list_data as $a) {
@@ -149,21 +156,17 @@
                 $data = strtolower($data);
                 $data = str_replace("’", "'", $data);
                 $all_words = utf8_str_word_count($data, 1);
-                $all_words = array_count_values($all_words);
-                $count = 0;
+//                $all_words = array_count_values($all_words);
+                $all_words = array_unique($all_words);
                 
+                $count = 0;
                 $temp_words = array();
-                foreach ($all_words as $word => $time) {
-//                    if ($word == "i'd") {
-//                        if (in_array($word, $all_list_words)) {
-//                            echo "DUng roi";
-//                        } else {
-//                            echo "FUCK SAI";
-//                        }
-//                        exit;
-                    if (count($all_list_words) > 0 && in_array($word, $all_list_words)) {   
-                        $count = $count + 1;
-                        $temp_words[] = $word;
+                foreach ($all_words as $word) {
+                    if (is_array($all_list_words) && !empty($all_list_words)) {
+                        if (count($all_list_words) > 0 && in_array($word, $all_list_words)) {   
+                            $count = $count + 1;
+                            $temp_words[] = $word;
+                        }
                     }
                 }
                 $temp['text'] = $data;
@@ -174,18 +177,16 @@
                 
                 $TEMPall_list_words = $all_list_words;
                 
-                usort($TEMPall_list_words, function($a, $b) {
-                    return strlen($b) - strlen($a);
-                });
-                
-                foreach ($TEMPall_list_words as $word) {
-                    $html_data = highlight($html_data, $word);
+                if (is_array($TEMPall_list_words) && !empty($TEMPall_list_words)) {
+                    usort($TEMPall_list_words, function($a, $b) {
+                        return strlen($b) - strlen($a);
+                    });
+
+                    foreach ($TEMPall_list_words as $word) {
+                        $html_data = highlight($html_data, $word);
+                    }
                 }
                 $temp['html'] = $html_data;
-                
-//                $re = '/(?i)<b>.*?<\/b>/m';
-//                $temp['clean'] = preg_replace($re, '', $html_data);
-//                $temp['clean'] = str_replace("  ", " ", $temp['clean']);
                 
                 $final_result[] = $temp;
             }
@@ -315,6 +316,8 @@ function utf8_str_word_count($string, $format = 0, $charlist = null)
                                                 <div class="script-words"><?php echo json_encode($text_area['words']) ?></div>
                                                 <?php if (!$hide_textarea) { ?>
                                                 <textarea data-autoresize class="form-control" rows="5" name="doan_van[]" style="resize:vertical;"><?php echo $text_area['text'] ?></textarea>
+                                                <?php } else { ?>
+                                                <textarea data-autoresize class="form-control" style="display: none" rows="5" name="doan_van[]" style="resize:vertical;"><?php echo $text_area['text'] ?></textarea>
                                                 <?php } ?>
                                             </div>
                                         <?php } } else { ?> 
