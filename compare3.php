@@ -193,7 +193,7 @@ $count_textarea = count($final_result);
 if (!$count_textarea) {
     $count_textarea = 1;
 } else {
-    usort($final_result, 'sortByCount');
+    array_multisort(array_column($final_result, 'percentMatched'), SORT_DESC, array_column($final_result, 'count'), SORT_DESC, $final_result);
     write_excel($file_exported, $final_result);
 }
 

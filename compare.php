@@ -193,7 +193,7 @@ $count_textarea = count($final_result);
 if (!$count_textarea) {
     $count_textarea = 1;
 } else {
-    usort($final_result, 'sortByCount');
+    array_multisort(array_column($final_result, 'percentMatched'), SORT_DESC, array_column($final_result, 'count'), SORT_DESC, $final_result);
     write_excel($file_exported, $final_result);
 }
 
@@ -299,6 +299,7 @@ function utf8_str_word_count($string, $format = 0, $charlist = null)
                                 <div class="col-lg-7">
                                         <button type="button" class="btn btn-primary" onclick="add_textarea()">Add Paragraph</button>
                                         <button type="submit" class="btn btn-success" name="type_submit" value="submit">Do Analysis</button>
+                                        <button type="submit" class="btn btn-success" name="type_start" value="start">Start</button>
                                         <button type="submit" class="btn btn-default" name="type_reset" value="reset">Reset</button>
                                         <input type="file" name="importfile" id="importfile" style='margin-top: 10px'/>
                                         <div id="textarea-container" class="form-group" style="margin-top: 10px;">
