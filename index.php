@@ -137,6 +137,9 @@ function write_excel($file_exported, $list_data) {
     <ul class="nav navbar-nav">
       <li class="active"><a href=".">Count Words</a></li>
       <li><a href="compare.php">Compare</a></li>
+      <li><a href="compare2.php">Compare 2</a></li>
+      <li><a href="compare3.php">Compare 3</a></li>
+      <li><a href="compare4.php">Compare 4</a></li>
     </ul>
   </div>
 </nav>

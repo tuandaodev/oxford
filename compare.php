@@ -140,14 +140,6 @@
         if (is_array($text_list_data) && !empty($text_list_data)) {
             $text_list_data_view = implode("\n", $text_list_data);
         }
-        // Data de lam hightlight
-//        $temp_data = array();
-//        foreach ($text_list_data as $a) {
-//            if (strlen($a) < 2) continue;
-//            $temp_data[] = str_replace("'", "\'", $a);
-//        }
-//        $text_list_data_hightlight = implode('","', $temp_data);
-//        $text_list_data_hightlight = '"' . $text_list_data_hightlight . '"';
     }
     
     $final_result = array();
@@ -158,6 +150,11 @@
                 $all_words = utf8_str_word_count($data, 1);
 //                $all_words = array_count_values($all_words);
                 $all_words = array_unique($all_words);
+                
+                if (count($all_words) < 10) {
+                    unset($text_data[$key]);
+                    continue;
+                }
                 
                 $count = 0;
                 $temp_words = array();
@@ -172,7 +169,7 @@
                 $temp['text'] = $data;
                 $temp['count'] = $count;
                 $temp['words'] = $temp_words;
-                
+                $temp['percentMatched'] = $count/count($all_words)*100;
                 $html_data = $data;
                 
                 $TEMPall_list_words = $all_list_words;
@@ -256,7 +253,7 @@ function read_excel($file_input) {
 }
 
 function sortByCount($a, $b) {
-    return $b['count'] - $a['count'];
+    return $b['percentMatched'] - $a['percentMatched'];
 }
 function utf8_str_word_count($string, $format = 0, $charlist = null)
 {
@@ -285,6 +282,9 @@ function utf8_str_word_count($string, $format = 0, $charlist = null)
     <ul class="nav navbar-nav">
       <li><a href=".">Count Words</a></li>
       <li class="active"><a href="compare.php">Compare</a></li>
+      <li><a href="compare2.php">Compare 2</a></li>
+      <li><a href="compare3.php">Compare 3</a></li>
+      <li><a href="compare4.php">Compare 4</a></li>
     </ul>
   </div>
 </nav>
@@ -311,7 +311,7 @@ function utf8_str_word_count($string, $format = 0, $charlist = null)
                                             ?>
                                             <div id="textarea<?php echo $html_count ?>" class="multi-textarea">
                                                 <button type="button" onclick="updateText(this)" status="1" class="btn btn-default btn-circle btn-xs"><i class="fa fa-check"></i></button>
-                                                <label>Đoạn #<?php echo $html_count ?>: (Số từ matched: <?php echo $text_area['count'] ?>)</label>
+                                                <label>Đoạn #<?php echo $html_count ?>: (Số từ matched: <zz><?php echo $text_area['count'] . '</zz>-<i>' . round($text_area['percentMatched'],2) ?>%</i>)</label>
                                                 <div class="doan-van"><?php echo $text_area['html'] ?></div>
                                                 <div class="script-words"><?php echo json_encode($text_area['words']) ?></div>
                                                 <?php if (!$hide_textarea) { ?>
