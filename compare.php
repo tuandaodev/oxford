@@ -30,6 +30,7 @@
     }
     
     $file_input = 'input/compare_input.txt';
+    $file_input_500 = 'input/compare_input_500.txt';
     $file_list_input = 'input/compare_list_input.txt';
     
     $file_exported = 'export/compare_exported.xlsx';
@@ -58,6 +59,15 @@
                 $text_data = array_merge($text_data, $import_data);
             }
             
+            if (file_exists($file_input_500)) {
+                $text_data_500 = file_get_contents($file_input_500);
+                $text_data_500 = json_decode($text_data_500);
+                
+                if (is_array($text_data_500) && !empty($text_data_500)) {
+                    $text_data = array_merge($text_data, $text_data_500);
+                }
+            }
+            
             file_put_contents($file_input, json_encode($text_data));
 
             $text_list_data_raw = '';
@@ -66,18 +76,18 @@
             }
             
             if (isset($_FILES['importfile2']) && ($_FILES['importfile2']['error'] == 0)) {  
-                $file_input = $_FILES['importfile2']['tmp_name'];
+                $file_input_excel = $_FILES['importfile2']['tmp_name'];
                 
                 $list_string = array();
                 if (strpos($_FILES['importfile2']['name'], '.csv') !== false) {
-                    $file = fopen($file_input,"r");
+                    $file = fopen($file_input_excel,"r");
                     while (!feof($file)) {
                         $temp_data = fgetcsv($file);
                         $list_string[] = $temp_data[1];
                     }
                     fclose($file);
                 } else {
-                    $list_string = read_excel($file_input);
+                    $list_string = read_excel($file_input_excel);
                 }
                 
                 if (count($list_string) > 0) {
@@ -102,13 +112,14 @@
                 if (is_array($text_list_data) && !empty($text_list_data)) {
                     file_put_contents($file_list_input, json_encode($text_list_data));
                 } else {
-                    file_put_contents($file_list_input, '');
+                    if (file_exists($file_list_input)) unlink($file_list_input);
                 }
             }
         }
         
         if (isset($_POST['type_reset']) && $_POST['type_reset'] == 'reset') {
             if (file_exists($file_input)) unlink($file_input);
+            if (file_exists($file_input_500)) unlink($file_input_500);
             if (file_exists($file_list_input)) unlink($file_list_input);
             if (file_exists($file_exported)) unlink($file_exported);
         }
@@ -195,6 +206,24 @@ if (!$count_textarea) {
 } else {
     array_multisort(array_column($final_result, 'percentMatched'), SORT_DESC, array_column($final_result, 'count'), SORT_DESC, $final_result);
     write_excel($file_exported, $final_result);
+}
+
+if (count($final_result) > 500) {
+    $save_more_500 = array();
+    $count = 0;
+    foreach ($final_result as $key => $result) {
+        $count++;
+        if ($count < 500) continue;
+        $save_more_500[] = $result['text'];
+    }
+    
+    if (is_array($save_more_500) && !empty($save_more_500)) {
+        file_put_contents($file_input_500, json_encode($save_more_500));
+    } else {
+        if (file_exists($file_input_500)) unlink($file_input_500);
+    }
+    
+    $final_result = array_slice($final_result, 0, 500);
 }
 
 $hide_textarea = false;
@@ -299,7 +328,6 @@ function utf8_str_word_count($string, $format = 0, $charlist = null)
                                 <div class="col-lg-7">
                                         <button type="button" class="btn btn-primary" onclick="add_textarea()">Add Paragraph</button>
                                         <button type="submit" class="btn btn-success" name="type_submit" value="submit">Do Analysis</button>
-                                        <button type="submit" class="btn btn-success" name="type_start" value="start">Start</button>
                                         <button type="submit" class="btn btn-default" name="type_reset" value="reset">Reset</button>
                                         <input type="file" name="importfile" id="importfile" style='margin-top: 10px'/>
                                         <div id="textarea-container" class="form-group" style="margin-top: 10px;">
