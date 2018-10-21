@@ -99,9 +99,18 @@
             if (!empty($text_list_data_raw)) {
                 $text_list_data_raw = strtolower($text_list_data_raw);
                 $text_list_data_raw = str_replace("’", "'", $text_list_data_raw);
-                // new function
-                $text_list_data_raw = utf8_str_word_count($text_list_data_raw, 1);
-                $text_list_data = array_unique($text_list_data_raw);
+                
+                $array_strings = str_split($text_list_data_raw, 5000);
+                $all_words = array();
+
+                $count_test = 0;
+                foreach ($array_strings as $temp_string) {
+                    $all_words_temp = utf8_str_word_count($temp_string, 1);
+                    $all_words = array_merge($all_words, $all_words_temp);
+                }
+
+                $all_words = array_replace($all_words,array_fill_keys(array_keys($all_words, null),''));
+                $text_list_data = array_unique($all_words);
                 
                 foreach ($text_list_data as $key => $temp_word) {
                     if ($temp_word == "-" || $temp_word == "_") {
