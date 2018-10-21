@@ -9,6 +9,10 @@
   </head>
   <?php
   
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+  
     require_once('PHPExcel/autoload.php');
     use PhpOffice\PhpSpreadsheet\Spreadsheet;
     use PhpOffice\PhpSpreadsheet\IOFactory;
@@ -35,7 +39,16 @@
             $text_data = str_replace("’", "", $text_data);
             $temp_data = strtolower($text_data);
             
-            $all_words = utf8_str_word_count($temp_data, 1);
+            $array_strings = str_split($temp_data, 5000);
+            $all_words = array();
+            
+            $count_test = 0;
+            foreach ($array_strings as $temp_string) {
+                $all_words_temp = utf8_str_word_count($temp_string, 1);
+                $all_words = array_merge($all_words, $all_words_temp);
+            }
+            
+            $all_words = array_replace($all_words,array_fill_keys(array_keys($all_words, null),''));
             $result = array_count_values($all_words);
             
             foreach ($result as $key => $temp_word) {
