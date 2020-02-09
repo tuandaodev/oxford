@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="favicon.ico">
+    <style>
+    @import url('https://fonts.googleapis.com/css?family=Song+Myung:400');
+    *{
+        font-family: "Song Myung",Arial;
+    }
+    </style>
     <title>English - Tools</title>
   </head>
   <?php
@@ -12,7 +18,29 @@
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-  
+ function isCjk($string) {
+    return isChinese($string) || isJapanese($string) || isKorean($string);
+}
+
+function isChinese($string) {
+    return preg_match("/\p{Han}+/u", $string);
+}
+
+function isJapanese($string) {
+    return preg_match('/[\x{4E00}-\x{9FBF}\x{3040}-\x{309F}\x{30A0}-\x{30FF}]/u', $string);
+}
+
+function isKorean($string) {
+    return preg_match('/[\x{3130}-\x{318F}\x{AC00}-\x{D7AF}]/u', $string);
+}
+function utf8_str_split($str='',$len=1){
+    preg_match_all("/./u", $str, $arr);
+    $arr = array_chunk($arr[0], $len);
+    $arr = array_map('implode', $arr);
+    $arr = array_diff( $arr,['']);
+    
+    return $arr;
+}
     require_once('PHPExcel/autoload.php');
     use PhpOffice\PhpSpreadsheet\Spreadsheet;
     use PhpOffice\PhpSpreadsheet\IOFactory;
@@ -25,7 +53,7 @@ error_reporting(E_ALL);
     $file_exported = 'export/exported.xlsx';
     $need_export = false;
     $have_exported_file = false;
-    
+
     if (isset($_POST) && !empty($_POST)) {
         
         if (isset($_POST['type_submit']) && $_POST['type_submit'] == 'submit') {
@@ -39,6 +67,14 @@ error_reporting(E_ALL);
             $text_data = str_replace("’", "", $text_data);
             $temp_data = strtolower($text_data);
             
+            if(isCjk($temp_data))
+            {
+                $temp_data = str_replace(" ", "", $temp_data);
+                $array_strings = explode(" ", $temp_data);
+                $array_strings = utf8_str_split($temp_data,1);
+                //print_r($array_strings);die();
+            }
+            else
             $array_strings = str_split($temp_data, 5000);
             $all_words = array();
             
@@ -49,6 +85,7 @@ error_reporting(E_ALL);
             }
             
             $all_words = array_replace($all_words,array_fill_keys(array_keys($all_words, null),''));
+            $all_words = array_diff( $all_words,['']);
             $result = array_count_values($all_words);
             
             foreach ($result as $key => $temp_word) {
